@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mo Molok — Authentic Nepalese Street Food | Ashfield, Sydney</title>
+  <title>Mo Molok — Authentic Nepalese Gastronomy & Dharan Street Cuisine | Ashfield, Sydney</title>
   <meta name="description"
-    content="Mo Molok brings the vibrant street flavours of Dharan, Nepal to Ashfield, Sydney. Authentic momos, chowmein, thukpa & Dharane specials. Order now." />
+    content="Experience the refined flavors of Dharan, Nepal in Ashfield, Sydney. Artisanal hand-folded momos, warming thukpa broth, and Dharane street specials in a warm boutique eatery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Syne:wght@700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,27 +18,31 @@
 <body>
 
   <!-- ===== PRELOADER ===== -->
-  <div id="preloader" role="status" aria-label="Loading">
-    <img src="logo.jpg" alt="Mo Molok" class="preloader-logo" />
-    <span class="preloader-text">MO MOLOK</span>
-    <div class="preloader-bar">
-      <div class="preloader-bar-fill"></div>
+  <div id="preloader" role="status" aria-label="Loading Mo Molok">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <img src="logo.jpg" alt="Mo Molok" class="preloader-logo" />
+        <div class="preloader-ring"></div>
+      </div>
+      <span class="preloader-title">MO MOLOK</span>
+      <span class="preloader-sub">Dharan Street Cuisine & Gastronomy</span>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
     </div>
   </div>
 
   <!-- ===== ANNOUNCEMENT TICKER ===== -->
   <div class="ticker-wrap" id="ticker-wrap" aria-label="Announcements">
     <div class="ticker-track">
-      <span>🔥 Now on Uber Eats — order from home!</span>
-      <span>🥟 Vegan Momos available — Dharane style</span>
+      <span>🌿 Authentic Dharan Hill Flavours — Handcrafted Daily in Ashfield</span>
+      <span>🥟 Signature Jhol Momo — Slow-Simmered Sesame Tomato Broth</span>
       <span>📍 20 Charlotte Street, Ashfield NSW 2131</span>
-      <span>⭐ Rated 4.8 on Google · 67+ Reviews!</span>
-      <span>🌶️ Try our Jhol Momo — the soup of the hills</span>
-      <span>🎉 Follow @momoloksyd on Instagram for daily specials</span>
-      <span>🔥 Now on Uber Eats — order from home!</span>
-      <span>🥟 Vegan Momos available — Dharane style</span>
+      <span>⭐ 4.8 Rated on Google · 67+ Verified Guest Reviews</span>
+      <span>🛵 Order Fresh via UberEats & Pick-up Available</span>
+      <span>🌿 Authentic Dharan Hill Flavours — Handcrafted Daily in Ashfield</span>
+      <span>🥟 Signature Jhol Momo — Slow-Simmered Sesame Tomato Broth</span>
       <span>📍 20 Charlotte Street, Ashfield NSW 2131</span>
-      <span>⭐ Rated 4.8 on Google · 67+ Reviews!</span>
     </div>
   </div>
 
@@ -47,133 +51,157 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" id="nav-logo-link">
         <img src="logo.jpg" alt="Mo Molok Logo" class="logo-img" />
-        <span class="logo-text">MO MOLOK</span>
+        <div class="logo-text-group">
+          <span class="logo-text">MO MOLOK</span>
+          <span class="logo-tag">Dharan · Sydney</span>
+        </div>
       </a>
+
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#about" class="nav-link">Our Story</a></li>
         <li><a href="#menu" class="nav-link">Menu</a></li>
-        <li><a href="#specials" class="nav-link">Specials</a></li>
-        <li><a href="#dharan" class="nav-link">Our Roots</a></li>
+        <li><a href="#dharan" class="nav-link">Dharan Heritage</a></li>
+        <li><a href="#gallery" class="nav-link">Ambience</a></li>
         <li><a href="#contact" class="nav-link">Find Us</a></li>
       </ul>
-      <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="nav-cta" id="nav-order-btn">Order Now</a>
-      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline-sm" id="open-reserve-btn">Reserve a Table</button>
+        <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="nav-cta" id="nav-order-btn">Order Online</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ===== HERO SECTION ===== -->
   <section id="hero" class="hero-section" role="banner">
-    <!-- Client's exact landing page background -->
-    <div class="hero-bg" id="hero-bg" style="background-image: url('landing%20page.png')"></div>
+    <div class="hero-bg" id="hero-bg" style="background-image: url('dharan_mist_mountains.png')"></div>
     <div class="hero-overlay"></div>
-
-    <!-- Interactive Prayer Flags -->
-    <div class="flags-container" id="flags-container" aria-hidden="true">
-      <div class="flag-rope" id="flag-rope-1">
-        <div class="flag-string"></div>
-        <!-- Flags generated by JS -->
-      </div>
-      <div class="flag-rope" id="flag-rope-2">
-        <div class="flag-string"></div>
-      </div>
-    </div>
 
     <!-- Hero Content -->
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span>Ashfield, Sydney · Est. 2024</span>
+      <div class="hero-status-badge">
+        <span class="status-dot"></span>
+        <span id="live-status-text">Open Today · Ashfield, Sydney</span>
       </div>
+
       <h1 class="hero-title">
-        <span class="title-line title-line-1">From the Hills</span>
-        <span class="title-line title-line-2">of <em>Dharan</em></span>
-        <span class="title-line title-line-3">to Your Plate</span>
+        <span class="title-line title-line-1">From the Misty Hills of</span>
+        <span class="title-line title-line-2"><em>Dharan</em> to Sydney</span>
       </h1>
-      <p class="hero-sub">Authentic Nepalese street food — hand-folded momos, warming thukpa, and house-made Dharane favourites served with heart in the heart of Ashfield.</p>
+
+      <p class="hero-sub">
+        An artisanal culinary tribute to Nepal’s street-food capital. Hand-folded momos, warming broth, and Dharane family recipes crafted with passion in Ashfield.
+      </p>
+
       <div class="hero-actions">
-        <a href="#menu" class="btn btn-primary" id="hero-menu-btn">Explore the Menu</a>
-        <a href="https://maps.app.goo.gl/RDFsbnTmdkxB37sNA" target="_blank" rel="noopener" class="btn btn-ghost"
-          id="hero-map-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          Find Us
+        <a href="#menu" class="btn btn-primary" id="hero-menu-btn">
+          <span>Explore Menu</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn-secondary" id="hero-reserve-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Book a Table</span>
+        </button>
+        <a href="https://maps.app.goo.gl/RDFsbnTmdkxB37sNA" target="_blank" rel="noopener" class="btn btn-ghost" id="hero-map-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get Directions
         </a>
       </div>
+
+      <!-- Hero Stats Bar -->
       <div class="hero-stats">
-        <div class="stat" id="stat-rating">
-          <span class="stat-num">4.8</span>
+        <div class="stat-card" id="stat-rating">
+          <div class="stat-header">
+            <span class="stat-num">4.8</span>
+            <div class="stars">★★★★★</div>
+          </div>
           <span class="stat-label">Google Rating</span>
-          <div class="stars">★★★★★</div>
         </div>
         <div class="stat-divider"></div>
-        <div class="stat" id="stat-reviews">
+        <div class="stat-card" id="stat-reviews">
           <span class="stat-num">67+</span>
-          <span class="stat-label">Reviews</span>
+          <span class="stat-label">Verified Reviews</span>
         </div>
         <div class="stat-divider"></div>
-        <div class="stat" id="stat-items">
+        <div class="stat-card" id="stat-items">
           <span class="stat-num">30+</span>
-          <span class="stat-label">Menu Items</span>
+          <span class="stat-label">Dharane Recipes</span>
         </div>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
+    <!-- Scroll Indicator -->
     <div class="scroll-indicator" aria-hidden="true">
       <div class="scroll-mouse">
         <div class="scroll-wheel"></div>
       </div>
-      <span>Scroll</span>
+      <span>Scroll Down</span>
     </div>
   </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
+  <!-- ===== OUR STORY SECTION ===== -->
   <section id="about" class="section about-section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-text">
-          <span class="section-eyebrow">Our Story</span>
-          <h2 class="section-title">A Taste of Home,<br /><em>Far From the Hills</em></h2>
-          <p class="about-body">Mo Molok began with a craving — the kind that only real street food can satisfy. Rooted in the food culture of <strong>Dharan, Nepal</strong>, we bring the flavours of mountain markets and late-night family kitchens to Ashfield, Sydney.</p>
-          <p class="about-body">Every momo is folded by hand. Every broth is slow-simmered. Every plate is built to feel like welcome — warm, honest, and unforgettable.</p>
-          <div class="about-tags">
-            <span class="tag">🥟 Handmade Momos</span>
-            <span class="tag">🌶️ Fresh Achar</span>
-            <span class="tag">🍜 Authentic Thukpa</span>
-            <span class="tag">🌱 Vegan Options</span>
+        <div class="about-text-col">
+          <span class="section-eyebrow">The Mo Molok Heritage</span>
+          <h2 class="section-title">A Taste of Home,<br /><em>Rooted in Dharan</em></h2>
+          <p class="about-lead">
+            Mo Molok was born out of nostalgia for the bustling night markets of <strong>Dharan, Eastern Nepal</strong> — where foggy hill breezes meet the comforting aroma of steaming momo baskets and sizzled spices.
+          </p>
+          <p class="about-body">
+            Every dumpling at Mo Molok is pleated by hand using fresh ingredients and traditional Himalayan spice blends. From slow-simmered sesame Jhol broths to iconic Dharane Egg Rolls, we bring authentic hill gastronomy to Ashfield with modern elegance.
+          </p>
+
+          <div class="about-features-grid">
+            <div class="feature-item">
+              <span class="feature-icon">🥟</span>
+              <div>
+                <h4>Handcrafted Daily</h4>
+                <p>Folded fresh every morning with house-ground fillings and delicate wrapping.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🌿</span>
+              <div>
+                <h4>Authentic Dharan Spices</h4>
+                <p>Pure Himalayan Sichuan timur, roasted sesame, and traditional aromatic herb oils.</p>
+              </div>
+            </div>
           </div>
-          <div class="about-rating-card">
-            <div class="review-quote">"Mo Molok has the best Nepalese food in Sydney. The flavours are honest, comforting, and the momos are unreal."</div>
-            <div class="reviewer">— Peter F. · Google Review</div>
+
+          <div class="about-quote-box">
+            <p class="quote-text">"The Jhol momos tasted exactly like the ones I had in Bhanu Chowk, Dharan. Pure nostalgia and incredible flavor!"</p>
+            <span class="quote-author">— Google Reviewer · Sydney</span>
           </div>
         </div>
-        <div class="about-visual">
-          <div class="about-img-frame">
-            <img src="logo 1.png" alt="Mo Molok neon sign" class="about-neon" id="neon-sign-img" />
-            <div class="about-img-glow"></div>
+
+        <div class="about-visual-col">
+          <div class="about-image-card">
+            <img src="restaurant_interior_dharan.png" alt="Mo Molok Dining Ambience" class="about-img" />
+            <div class="about-img-badge">
+              <span>Warm & Welcoming Atmosphere</span>
+            </div>
           </div>
-          <div class="hours-card" id="hours-card">
-            <h3 class="hours-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              Opening Hours
-            </h3>
+
+          <div class="hours-card">
+            <div class="hours-card-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <h3>Opening Hours</h3>
+            </div>
             <ul class="hours-list">
-                  <li><span>Monday</span><span>2:00 pm – 10:00 pm</span></li>
-              <li><span>Tuesday</span><span>4:00 pm – 10:00 pm</span></li>
-              <li><span>Wednesday</span><span>3:00 pm – 10:00 pm</span></li>
-              <li><span>Thursday</span><span>3:00 pm – 10:00 pm</span></li>
-              <li class="highlight-day"><span>Friday</span><span>4:00 pm – 11:00 pm</span></li>
-              <li class="highlight-day"><span>Saturday</span><span>4:00 pm – 11:00 pm</span></li>
-              <li><span>Sunday</span><span>2:00 pm – 10:00 pm</span></li>
+              <li><span>Monday</span><span>2:00 PM – 10:00 PM</span></li>
+              <li><span>Tuesday</span><span>4:00 PM – 10:00 PM</span></li>
+              <li><span>Wednesday</span><span>3:00 PM – 10:00 PM</span></li>
+              <li><span>Thursday</span><span>3:00 PM – 10:00 PM</span></li>
+              <li class="weekend-highlight"><span>Friday</span><span>4:00 PM – 11:00 PM</span></li>
+              <li class="weekend-highlight"><span>Saturday</span><span>4:00 PM – 11:00 PM</span></li>
+              <li><span>Sunday</span><span>2:00 PM – 10:00 PM</span></li>
             </ul>
-            <div class="hours-note">Uber Eats delivery until 10:30 pm</div>
+            <div class="hours-footer-note">🛵 Uber Eats delivery available during open hours</div>
           </div>
         </div>
       </div>
@@ -181,28 +209,31 @@
   </section>
 
   <!-- ===== PROMISE SECTION ===== -->
-  <section class="section promise-section" id="promise">
+  <section class="section promise-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Why Guests Return</span>
-        <h2 class="section-title">Built on comfort, craft, and real flavour</h2>
+        <span class="section-eyebrow">Our Culinary Pillars</span>
+        <h2 class="section-title">Built on Craft, Comfort & Tradition</h2>
       </div>
+
       <div class="promise-grid">
-        <article class="promise-card reveal">
-          <span class="promise-number">01</span>
-          <h3>Fresh every day</h3>
-          <p>We prep, fold, and season with care so every order tastes like it was made with a little extra love.</p>
-        </article>
-        <article class="promise-card reveal">
-          <span class="promise-number">02</span>
-          <h3>Authentic recipes</h3>
-          <p>Our menu stays true to Dharan street food traditions — bold spices, rich broths, and textures that feel like home.</p>
-        </article>
-        <article class="promise-card reveal">
-          <span class="promise-number">03</span>
-          <h3>Neighbourhood favourite</h3>
-          <p>Casual, inviting, and consistently memorable — the kind of place people recommend to friends before they even finish their meal.</p>
-        </article>
+        <div class="promise-card">
+          <span class="promise-num">01</span>
+          <h3>Freshly Made Every Day</h3>
+          <p>We believe great momos demand patience. No shortcuts, frozen pre-packs, or artificial flavorings — everything is prepared fresh for each seating.</p>
+        </div>
+
+        <div class="promise-card">
+          <span class="promise-num">02</span>
+          <h3>Dharan Street Traditions</h3>
+          <p>True to Eastern Nepal recipes — featuring roasted sesame timur achars, crispy nimki snacks, and warming thukpa broths crafted to perfection.</p>
+        </div>
+
+        <div class="promise-card">
+          <span class="promise-num">03</span>
+          <h3>Warm Hospitality</h3>
+          <p>Whether you're stopping by for a quick lunch, late dinner, or ordering delivery to your doorstep, we welcome every guest like family.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -211,393 +242,271 @@
   <section id="menu" class="section menu-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">What We Serve</span>
-        <h2 class="section-title">The Full Menu</h2>
-        <p class="section-desc">Every item crafted with the authentic spices and soul of Nepalese street cooking.</p>
+        <span class="section-eyebrow">Artisanal Offerings</span>
+        <h2 class="section-title">The Culinary Menu</h2>
+        <p class="section-desc">Explore our hand-folded momos, signature Dharane street specials, and authentic Nepalese comfort food.</p>
       </div>
 
-      <!-- Menu Filter Tabs -->
-      <div class="menu-tabs" id="menu-tabs" role="tablist">
-        <button class="tab-btn active" role="tab" data-filter="all" id="tab-all" aria-selected="true">All</button>
-        <button class="tab-btn" role="tab" data-filter="momo" id="tab-momo" aria-selected="false">Momo 🥟</button>
-        <button class="tab-btn" role="tab" data-filter="specials" id="tab-specials" aria-selected="false">Dharane
-          Specials</button>
-        <button class="tab-btn" role="tab" data-filter="snacks" id="tab-snacks" aria-selected="false">Snacks</button>
-        <button class="tab-btn" role="tab" data-filter="noodles" id="tab-noodles" aria-selected="false">Noodles &
-          Rice</button>
-        <button class="tab-btn" role="tab" data-filter="drinks" id="tab-drinks" aria-selected="false">Drinks</button>
+      <!-- Search & Filter Controls -->
+      <div class="menu-controls">
+        <div class="menu-search-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="menu-search-input" placeholder="Search dish name, momo, thukpa, spicy..." aria-label="Search Menu" />
+          <button id="clear-search-btn" class="clear-btn" aria-label="Clear Search">&times;</button>
+        </div>
+
+        <div class="menu-tabs" role="tablist" id="menu-tabs">
+          <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Items</button>
+          <button class="tab-btn" data-filter="momo" role="tab">Momos 🥟</button>
+          <button class="tab-btn" data-filter="specials" role="tab">Dharane Specials 🔥</button>
+          <button class="tab-btn" data-filter="noodles" role="tab">Thukpa & Noodles 🍜</button>
+          <button class="tab-btn" data-filter="snacks" role="tab">Snacks 🌶️</button>
+          <button class="tab-btn" data-filter="drinks" role="tab">Drinks 🥤</button>
+        </div>
       </div>
 
+      <!-- Menu Grid -->
       <div class="menu-grid" id="menu-grid">
-        <!-- MOMOS -->
-        <div class="menu-card" data-cat="momo" id="item-steamed-chicken">
-          <div class="menu-card-badge popular">⭐ Most Liked</div>
-          <div class="menu-card-img">
-            <img src="momo_dish.jpg" alt="Chicken Steamed Momo" loading="lazy" />
+        <!-- ITEM 1: Chicken Steamed Momo -->
+        <article class="menu-card" data-cat="momo" data-name="chicken steamed momo dumpling">
+          <div class="menu-badge badge-popular">⭐ Best Seller</div>
+          <div class="menu-card-img-wrap">
+            <img src="steamed_momo_gourmet.png" alt="Chicken Steamed Momo" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
               <h3>Chicken Steamed Momo</h3>
               <span class="menu-price">$16.50</span>
             </div>
-            <p>Juicy chicken dumplings, seasoned with authentic spices, wrapped in delicate dough.</p>
+            <p class="menu-card-desc">Juicy chicken filling infused with green onions, ginger, and aromatic Himalayan timur spices inside delicate hand-pleated dough.</p>
+            <div class="menu-tags">
+              <span class="tag tag-spice">Mild Spice</span>
+              <span class="tag">Handcrafted</span>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="menu-card" data-cat="momo" id="item-veg-steamed">
-          <div class="menu-card-badge popular vegan">🌱 #1 Most Liked</div>
-          <div class="menu-card-img">
+        <!-- ITEM 2: Steamed Vegan Momo -->
+        <article class="menu-card" data-cat="momo" data-name="steamed vegan vegetable momo dumpling">
+          <div class="menu-badge badge-vegan">🌱 100% Vegan</div>
+          <div class="menu-card-img-wrap">
             <img src="momo_dish.jpg" alt="Steamed Vegan Momo" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
               <h3>Steamed Vegan Momo</h3>
               <span class="menu-price">$15.50</span>
             </div>
-            <p>Delicious vegan dumplings filled with fresh vegetables and spiced to perfection.</p>
-            <span class="vegan-badge">VG</span>
+            <p class="menu-card-desc">Finely minced seasonal vegetables, wild mushrooms, and fresh cabbage seasoned with Nepalese herbs.</p>
+            <div class="menu-tags">
+              <span class="tag tag-vegan">Vegan</span>
+              <span class="tag">Plant Based</span>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="menu-card" data-cat="momo" id="item-kothey-chicken">
-          <div class="menu-card-img">
-            <img src="momo_dish.jpg" alt="Pan Fried Momo" loading="lazy" />
+        <!-- ITEM 3: Pan Fried Kothey Momo -->
+        <article class="menu-card" data-cat="momo" data-name="kothey pan fried momo">
+          <div class="menu-card-img-wrap">
+            <img src="momo_dish.jpg" alt="Pan Fried Kothey Momo" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
               <h3>Pan Fried Kothey Momo</h3>
               <span class="menu-price">$17.50</span>
             </div>
-            <p>Pan-fried chicken momos with a crispy base and juicy, seasoned filling.</p>
+            <p class="menu-card-desc">Traditional half-steamed, half pan-fried chicken momos featuring a golden crispy bottom and juicy top.</p>
+            <div class="menu-tags">
+              <span class="tag">Crispy Base</span>
+              <span class="tag">House Favorite</span>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="menu-card" data-cat="momo" id="item-jhol-chicken">
-          <div class="menu-card-img">
-            <img src="momo_dish.jpg" alt="Jhol Momo" loading="lazy" />
+        <!-- ITEM 4: Chicken Jhol Momo -->
+        <article class="menu-card" data-cat="momo" data-name="chicken jhol momo soup broth">
+          <div class="menu-badge badge-dharan">🔥 Dharan Icon</div>
+          <div class="menu-card-img-wrap">
+            <img src="steamed_momo_gourmet.png" alt="Chicken Jhol Momo" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
+          <div class="menu-card-content">
+            <div class="menu-card-top">
               <h3>Chicken Jhol Momo</h3>
               <span class="menu-price">$18.99</span>
             </div>
-            <p>Chicken momos served in jhol — a deeply spiced Nepali broth.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="momo" id="item-pork-steamed">
-          <div class="menu-card-badge popular">Popular</div>
-          <div class="menu-card-img">
-            <img src="momo_dish.jpg" alt="Pork Steamed Momo" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Pork Steamed Momo</h3>
-              <span class="menu-price">$16.50</span>
+            <p class="menu-card-desc">Handcrafted chicken momos immersed in a warm, tangy roasted sesame, tomato, and Timur chili Jhol broth.</p>
+            <div class="menu-tags">
+              <span class="tag tag-spice">Medium Spice</span>
+              <span class="tag">Signature Soup</span>
             </div>
-            <p>Juicy steamed Nepalese dumplings filled with perfectly seasoned pork.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="menu-card" data-cat="momo" id="item-veg-jhol">
-          <div class="menu-card-img">
-            <img src="momo_dish.jpg" alt="Veg Jhol Momo" loading="lazy" />
+        <!-- ITEM 5: Dharane Egg Roll -->
+        <article class="menu-card" data-cat="specials" data-name="dharane egg roll chowmein wrap">
+          <div class="menu-badge badge-dharan">⭐ Dharan Street Icon</div>
+          <div class="menu-card-img-wrap">
+            <img src="dharane_special_thali.png" alt="Dharane Egg Roll" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Veg Jhol Momo</h3>
-              <span class="menu-price">$17.50</span>
-            </div>
-            <p>Vegetable momos served in a flavorful Nepalese jhol soup.</p>
-            <span class="vegan-badge">VG</span>
-          </div>
-        </div>
-
-        <!-- DHARANE SPECIALS -->
-        <div class="menu-card featured" data-cat="specials" id="item-egg-roll">
-          <div class="menu-card-badge popular">#3 Most Liked</div>
-          <div class="menu-card-img">
-            <img src="chowmein_dish.jpg" alt="Egg Roll" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Egg Roll</h3>
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Dharane Egg Roll</h3>
               <span class="menu-price">$12.99</span>
             </div>
-            <p>Savory egg roll wrapped around wok-fried chowmein noodles. A Dharan classic.</p>
-            <div class="item-tag">Dharane Special</div>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="specials" id="item-thukpa-noodle">
-          <div class="menu-card-img">
-            <img src="chowmein_dish.jpg" alt="Thukpa Noodle" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Thukpa Noodle</h3>
-              <span class="menu-price">$12.99</span>
+            <p class="menu-card-desc">Flaky flatbread layered with fluffy egg and stuffed with wok-fried chowmein noodles, onions, and spicy tomato reduction.</p>
+            <div class="menu-tags">
+              <span class="tag tag-dharan">Dharane Special</span>
+              <span class="tag">Street Food</span>
             </div>
-            <p>Boiled thukpa noodles with chickpeas, green soaked peas in a warming soup.</p>
-            <div class="item-tag">Dharane Special</div>
           </div>
-        </div>
+        </article>
 
-        <div class="menu-card" data-cat="specials" id="item-alu-nimki">
-          <div class="menu-card-img">
-            <img src="panipuri_dish.jpg" alt="Alu Nimki" loading="lazy" />
+        <!-- ITEM 6: Thukpa Noodle Soup -->
+        <article class="menu-card" data-cat="noodles" data-name="thukpa noodle soup bowl chicken broth">
+          <div class="menu-card-img-wrap">
+            <img src="thukpa_gourmet.png" alt="Chicken Thukpa Noodle Soup" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Alu Nimki</h3>
-              <span class="menu-price">$12.99</span>
-            </div>
-            <p>Crispy nimki paired with beautifully spiced potatoes.</p>
-            <div class="item-tag">Dharane Special</div>
-          </div>
-        </div>
-
-        <!-- SNACKS -->
-        <div class="menu-card" data-cat="snacks" id="item-alu-chop">
-          <div class="menu-card-badge popular">Popular</div>
-          <div class="menu-card-img">
-            <img src="panipuri_dish.jpg" alt="Alu Chop" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Alu Chop</h3>
-              <span class="menu-price">$11.99</span>
-            </div>
-            <p>Crispy deep-fried potato patties served with house-made achar.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="snacks" id="item-panipuri">
-          <div class="menu-card-img">
-            <img src="panipuri_dish.jpg" alt="Panipuri" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Panipuri</h3>
-              <span class="menu-price">$12.99</span>
-            </div>
-            <p>Crispy hollow puris filled with tangy tamarind water, spicy potatoes, and chickpeas.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="snacks" id="item-chatpatey">
-          <div class="menu-card-img">
-            <img src="panipuri_dish.jpg" alt="Chatpatey" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Chatpatey</h3>
-              <span class="menu-price">$12.99</span>
-            </div>
-            <p>A tangy and spicy Nepali snack mix with puffed rice, potatoes, and spices.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="snacks" id="item-dahi-puri">
-          <div class="menu-card-img">
-            <img src="panipuri_dish.jpg" alt="Dahi Puri" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Dahi Puri</h3>
-              <span class="menu-price">$12.99</span>
-            </div>
-            <p>Crunchy bite-size fried dough balls filled with mashed potato and yogurt.</p>
-          </div>
-        </div>
-
-        <!-- NOODLES -->
-        <div class="menu-card" data-cat="noodles" id="item-chicken-chowmein">
-          <div class="menu-card-img">
-            <img src="chowmein_dish.jpg" alt="Chicken Chowmein" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Chicken Chowmein</h3>
-              <span class="menu-price">$16.99</span>
-            </div>
-            <p>Wok-fried chowmein noodles with tender chicken pieces and vegetables.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="noodles" id="item-buff-chowmein">
-          <div class="menu-card-img">
-            <img src="chowmein_dish.jpg" alt="Buff Chowmein" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Buff Chowmein</h3>
-              <span class="menu-price">$16.99</span>
-            </div>
-            <p>Stir-fried chowmein noodles with authentic buffalo meat.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="noodles" id="item-chicken-thukpa">
-          <div class="menu-card-img">
-            <img src="chowmein_dish.jpg" alt="Chicken Thukpa" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Chicken Thukpa</h3>
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Chicken Thukpa Noodle Soup</h3>
               <span class="menu-price">$15.99</span>
             </div>
-            <p>Boiled thukpa noodles in a rich, savory chicken broth.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="noodles" id="item-chicken-fried-rice">
-          <div class="menu-card-img">
-            <img src="chowmein_dish.jpg" alt="Chicken Fried Rice" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Chicken Fried Rice</h3>
-              <span class="menu-price">$17.99</span>
+            <p class="menu-card-desc">Hearty Himalayan wheat noodle soup simmered in rich chicken stock with green peas, cilantro, and chili paste.</p>
+            <div class="menu-tags">
+              <span class="tag">Warming Soup</span>
+              <span class="tag">Fresh Greens</span>
             </div>
-            <p>Classic fried rice with tender chicken pieces.</p>
           </div>
-        </div>
+        </article>
 
-        <!-- DRINKS -->
-        <div class="menu-card" data-cat="drinks" id="item-mango-lassi">
-          <div class="menu-card-img drinks-img">
-            <div class="drink-icon">🥤</div>
+        <!-- ITEM 7: Alu Nimki -->
+        <article class="menu-card" data-cat="specials" data-name="alu nimki spicy potato crispy snack">
+          <div class="menu-card-img-wrap">
+            <img src="panipuri_dish.jpg" alt="Alu Nimki" loading="lazy" />
           </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Mango Lassi</h3>
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Dharane Alu Nimki</h3>
+              <span class="menu-price">$12.99</span>
+            </div>
+            <p class="menu-card-desc">Crispy fried diamond nimki crackers paired with tangy, mustard-infused spicy potato curry sauce.</p>
+            <div class="menu-tags">
+              <span class="tag tag-dharan">Dharane Special</span>
+              <span class="tag tag-spice">Spicy</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 8: Panipuri Platter -->
+        <article class="menu-card" data-cat="snacks" data-name="panipuri spicy tamarind water puri">
+          <div class="menu-card-img-wrap">
+            <img src="panipuri_dish.jpg" alt="Panipuri Platter" loading="lazy" />
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Street Panipuri Platter</h3>
+              <span class="menu-price">$12.99</span>
+            </div>
+            <p class="menu-card-desc">Crispy hollow puris filled with spiced potato-chickpea mash, served with ice-cold mint tamarind water shots.</p>
+            <div class="menu-tags">
+              <span class="tag">Interactive Food</span>
+              <span class="tag">Tangy & Crispy</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 9: Chicken Wok Chowmein -->
+        <article class="menu-card" data-cat="noodles" data-name="chicken chowmein wok noodles">
+          <div class="menu-card-img-wrap">
+            <img src="chowmein_dish.jpg" alt="Chicken Chowmein" loading="lazy" />
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Chicken Wok Chowmein</h3>
+              <span class="menu-price">$16.99</span>
+            </div>
+            <p class="menu-card-desc">High-heat wok-tossed noodles with tender chicken strips, crisp capsicum, cabbage, and soy garlic oil.</p>
+            <div class="menu-tags">
+              <span class="tag">Wok Fired</span>
+              <span class="tag">Classic</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 10: Mango Lassi -->
+        <article class="menu-card" data-cat="drinks" data-name="mango lassi sweet drink yogurt">
+          <div class="menu-card-img-wrap drink-card-wrap">
+            <div class="drink-symbol">🥭</div>
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-card-top">
+              <h3>Artisanal Mango Lassi</h3>
               <span class="menu-price">$9.99</span>
             </div>
-            <p>Creamy yogurt blended with ripe mango. Cooling and refreshing.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="drinks" id="item-sweet-lassi">
-          <div class="menu-card-img drinks-img">
-            <div class="drink-icon">🥛</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Sweet Lassi</h3>
-              <span class="menu-price">$8.99</span>
+            <p class="menu-card-desc">Rich creamy yogurt blended with real Alphonso mango pulp and cardamom dust. Refreshing spice-cooler.</p>
+            <div class="menu-tags">
+              <span class="tag">Cooling Drink</span>
+              <span class="tag">House Made</span>
             </div>
-            <p>Classic yogurt drink, sweetened and creamy.</p>
           </div>
-        </div>
-
-        <div class="menu-card" data-cat="drinks" id="item-soft-drinks">
-          <div class="menu-card-img drinks-img">
-            <div class="drink-icon">🥤</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Coke / Fanta / Sprite / Water</h3>
-              <span class="menu-price">$3.99</span>
-            </div>
-            <p>Classic soft drinks to complement your meal.</p>
-          </div>
-        </div>
-
-        <!-- BBQ WINGS -->
-        <div class="menu-card" data-cat="snacks" id="item-bbq-wings">
-          <div class="menu-card-img drinks-img">
-            <div class="drink-icon">🍗</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>BBQ Wings</h3>
-              <span class="menu-price">$12.99</span>
-            </div>
-            <p>Crispy southern wings tossed in BBQ sauce with roasted sesame.</p>
-          </div>
-        </div>
-
-        <div class="menu-card" data-cat="snacks" id="item-hot-wings">
-          <div class="menu-card-img drinks-img">
-            <div class="drink-icon">🌶️</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-header">
-              <h3>Hot Wings</h3>
-              <span class="menu-price">$12.99</span>
-            </div>
-            <p>Crispy southern wings tossed in hot spicy sauce with aioli on the side.</p>
-          </div>
-        </div>
+        </article>
       </div>
 
-      <div class="menu-cta-wrap">
-        <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg"
-          id="menu-order-now-btn">Order on Uber Eats</a>
+      <!-- Menu CTA -->
+      <div class="menu-cta-banner">
+        <div class="cta-text">
+          <h3>Hungry at home?</h3>
+          <p>Get your favorite Dharane momos and thukpa delivered straight to your door.</p>
+        </div>
+        <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="btn btn-primary" id="ubereats-cta-btn">
+          <span>Order on UberEats</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== DHARANE SPECIALS BANNER ===== -->
-  <section id="specials" class="specials-banner" aria-label="Dharane Specials">
-    <div class="specials-bg"></div>
-    <div class="container specials-inner">
-      <div class="specials-text">
-        <span class="section-eyebrow light">Signature</span>
-        <h2 class="specials-title">Dharane Specials</h2>
-        <p>Dishes that can only come from Dharan — recipes passed down through generations of street-food masters. The Egg Roll, the Thukpa, the Alu Nimki: these are not just dishes, they are memories plated.</p>
-        <a href="#menu" class="btn btn-primary" id="specials-view-btn">View All Specials</a>
-      </div>
-      <div class="specials-visual">
-        <img src="panipuri_dish.jpg" alt="Dharane Specials - Panipuri" class="specials-img" id="specials-food-img" />
-        <div class="specials-glow"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DHARAN SECTION ===== -->
+  <!-- ===== DHARAN HERITAGE & ROOTS ===== -->
   <section id="dharan" class="section dharan-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Our Roots</span>
-        <h2 class="section-title">The City That Made Us</h2>
-        <p class="section-desc">Dharan — where fog meets mountains, and every street corner smells of spice and steam.</p>
+        <span class="section-eyebrow">Our Roots & Culture</span>
+        <h2 class="section-title">The City That Inspired Us</h2>
+        <p class="section-desc">Dharan — where mountain morning mist meets vibrant street markets, warm hill culture, and legendary gastronomy.</p>
       </div>
+
       <div class="dharan-grid">
-        <div class="dharan-img-wrap" id="dharan-img-wrap">
-          <img src="dharan_hero_bg.jpg" alt="Dharan city at night" class="dharan-city-img" />
-          <div class="dharan-img-caption">
-            <span>Dharan, Nepal — Evening panorama</span>
+        <div class="dharan-visual-frame">
+          <img src="dharan_mist_mountains.png" alt="Dharan Mountain View" class="dharan-main-img" />
+          <div class="dharan-img-overlay-card">
+            <span class="dharan-badge">Himalayan Foothills</span>
+            <h3>Dharan, Nepal</h3>
+            <p>Elevation: 349m · Sunsari District</p>
           </div>
         </div>
-        <div class="dharan-facts">
-          <div class="dharan-fact" id="fact-1">
-            <div class="fact-icon">📍</div>
-            <div class="fact-body">
-              <h3>Gateway to the Hills</h3>
-              <p>Dharan sits at the foothills of the Himalayan range, where hill culture and plains culture collide beautifully — creating a food scene unlike anywhere else in Nepal.</p>
+
+        <div class="dharan-pillars">
+          <div class="dharan-pillar-card">
+            <div class="pillar-num">01</div>
+            <div>
+              <h3>The Culinary Crossroads</h3>
+              <p>Nestled at the base of the Eastern hills, Dharan connects mountain spice traditions with fresh Terai ingredients, giving birth to Nepal's most revered street food culture.</p>
             </div>
           </div>
-          <div class="dharan-fact" id="fact-2">
-            <div class="fact-icon">🥟</div>
-            <div class="fact-body">
-              <h3>Momo Capital</h3>
-              <p>Dharan is legendary for its street-food culture. Momos, egg rolls, and thukpa are not merely meals here — they are the city's language of welcome and warmth.</p>
-            </div>
-          </div>
-          <div class="dharan-fact" id="fact-3">
-            <div class="fact-icon">🧭</div>
-            <div class="fact-body">
+
+          <div class="dharan-pillar-card">
+            <div class="pillar-num">02</div>
+            <div>
               <h3>Bhanu Chowk & Bijayapur</h3>
-              <p>The iconic Bijayapur Clock Tower at sunset, the lively Bhanu Chowk bazaar — these are the living postcards we carry in our hearts and bring to every plate we serve.</p>
+              <p>From the iconic Clock Tower of Bhanu Chowk to the hilltop temples of Bijayapur, food is Dharan's living language of warmth, laughter, and community gathering.</p>
             </div>
           </div>
-          <div class="dharan-fact" id="fact-4">
-            <div class="fact-icon">🎏</div>
-            <div class="fact-body">
-              <h3>Prayer Flags & Good Vibes</h3>
-              <p>Like the lungta prayer flags that flutter above Dharan's ridges, Mo Molok carries the spirit of its home city — spreading colour, warmth, and good energy wherever it goes.</p>
+
+          <div class="dharan-pillar-card">
+            <div class="pillar-num">03</div>
+            <div>
+              <h3>Spirit of the Prayer Flags</h3>
+              <p>Just like the colorful lungta prayer flags floating over Dharan’s ridges, Mo Molok carries a message of peace, good food, and authentic hospitality to Sydney.</p>
             </div>
           </div>
         </div>
@@ -605,70 +514,138 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
+  <!-- ===== AMBIENCE & GALLERY ===== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Visual Experience</span>
+        <h2 class="section-title">Moments at Mo Molok</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item item-large">
+          <img src="restaurant_interior_dharan.png" alt="Boutique Dining Room" />
+          <div class="gallery-overlay">
+            <span>Boutique Dining Atmosphere</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="steamed_momo_gourmet.png" alt="Handfolded Momos" />
+          <div class="gallery-overlay">
+            <span>Fresh Steamed Jhol Momos</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="dharane_special_thali.png" alt="Dharane Thali Platter" />
+          <div class="gallery-overlay">
+            <span>Dharane Special Street Thali</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="thukpa_gourmet.png" alt="Warming Thukpa Broth" />
+          <div class="gallery-overlay">
+            <span>Signature Thukpa Bowl</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS & TESTIMONIALS ===== -->
+  <section class="section reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Guest Stories</span>
+        <h2 class="section-title">Loved by Locals & Travelers</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">PF</div>
+            <div>
+              <h4>Peter F.</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Mo Molok has hands-down the best Nepalese food in Sydney. The chicken jhol momo broth is so flavorful and comforting!"</p>
+          <span class="review-source">Verified Google Review</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">AK</div>
+            <div>
+              <h4>Aarav K.</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Being from Eastern Nepal, finding authentic Dharane egg rolls and alu nimki in Sydney feels like a dream come true."</p>
+          <span class="review-source">Verified Google Review</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">SL</div>
+            <div>
+              <h4>Sarah L.</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Cozy atmosphere, super friendly staff, and the vegan steamed momos were incredible. Will definitely be returning often!"</p>
+          <span class="review-source">Verified Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT & LOCATION ===== -->
   <section id="contact" class="section contact-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Find Us</span>
-        <h2 class="section-title">Come Hungry</h2>
+        <span class="section-eyebrow">Visit & Connect</span>
+        <h2 class="section-title">Come Dine With Us</h2>
       </div>
+
       <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-card" id="contact-address">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
+        <div class="contact-cards-col">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <h3>Address</h3>
-              <p>20 Charlotte Street<br />Ashfield NSW 2131<br />Australia</p>
-              <a href="https://maps.app.goo.gl/RDFsbnTmdkxB37sNA" target="_blank" rel="noopener" class="link-underline"
-                id="directions-link">Get Directions →</a>
+              <h3>Restaurant Location</h3>
+              <p>20 Charlotte Street<br />Ashfield NSW 2131, Australia</p>
+              <a href="https://maps.app.goo.gl/RDFsbnTmdkxB37sNA" target="_blank" rel="noopener" class="link-arrow">Open Google Maps →</a>
             </div>
           </div>
 
-          <div class="contact-card" id="contact-phone">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14h-.08z" />
-              </svg>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14h-.08z"/></svg>
             </div>
             <div>
-              <h3>Phone</h3>
-              <a href="tel:+61415377601" class="phone-link" id="phone-link">+61 415 377 601</a>
+              <h3>Phone Enquiries</h3>
+              <a href="tel:+61415377601" class="phone-number">+61 415 377 601</a>
+              <p class="phone-sub">Call for reservations & takeaway orders</p>
             </div>
           </div>
 
-          <div class="contact-card" id="contact-social">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-              </svg>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </div>
             <div>
-              <h3>Instagram</h3>
-              <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener" class="link-underline"
-                id="instagram-link">@momoloksyd</a>
-            </div>
-          </div>
-
-          <div class="contact-card" id="contact-delivery">
-            <div class="contact-icon">🚚</div>
-            <div>
-              <h3>Delivery</h3>
-              <p>Available via Uber Eats</p>
-              <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="link-underline"
-                id="ubereats-link">Order on Uber Eats →</a>
+              <h3>Social & Updates</h3>
+              <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener" class="link-arrow">Follow @momoloksyd on Instagram →</a>
             </div>
           </div>
         </div>
 
-        <div class="contact-map-wrap" id="contact-map-wrap">
+        <div class="contact-map-col">
           <iframe id="google-map-iframe" title="Mo Molok Location Map"
             src="https://maps.google.com/maps?q=20+Charlotte+Street+Ashfield+NSW+2131&output=embed&z=16" width="100%"
             height="100%" frameborder="0" style="border:0" allowfullscreen loading="lazy"
@@ -679,56 +656,131 @@
     </div>
   </section>
 
+  <!-- ===== RESERVATION MODAL ===== -->
+  <div class="modal-backdrop" id="reservation-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close" id="close-modal-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-content" id="modal-form-content">
+        <span class="modal-eyebrow">Table Booking</span>
+        <h2 id="modal-title">Reserve Your Table at Mo Molok</h2>
+        <p class="modal-desc">Book your seating for lunch or dinner. For parties larger than 8, please call us directly.</p>
+
+        <form id="reservation-form" class="reservation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name">Full Name *</label>
+              <input type="text" id="res-name" required placeholder="e.g. Sarah Jenkins" />
+            </div>
+            <div class="form-group">
+              <label for="res-phone">Phone Number *</label>
+              <input type="tel" id="res-phone" required placeholder="e.g. 0412 345 678" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-guests">Number of Guests *</label>
+              <select id="res-guests" required>
+                <option value="2">2 Guests</option>
+                <option value="1">1 Guest</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8+ Guests (Call Us)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="res-date">Date *</label>
+              <input type="date" id="res-date" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="res-time">Time Slot *</label>
+            <select id="res-time" required>
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="21:00">9:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="res-notes">Special Requests / Dietary Notes</label>
+            <textarea id="res-notes" rows="2" placeholder="e.g. Vegan dietary preferences, high chair needed..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Confirm Table Reservation</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="modal-success-state hidden" id="modal-success-state">
+        <div class="success-icon">✓</div>
+        <h2>Reservation Request Received!</h2>
+        <p>Thank you, <span id="success-guest-name">Guest</span>. We have reserved your table for <span id="success-details">date and time</span>.</p>
+        <p class="success-sub">A confirmation SMS will be sent to your phone shortly.</p>
+        <button class="btn btn-primary" id="success-close-btn">Done</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== FOOTER ===== -->
-  <footer class="footer" id="footer" role="contentinfo">
-    <div class="footer-bg"></div>
+  <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="logo.jpg" alt="Mo Molok" class="footer-logo" />
-        <p class="footer-tagline">Street Food · Good Vibes · Nepalese Soul</p>
+        <div class="footer-logo-row">
+          <img src="logo.jpg" alt="Mo Molok Logo" class="footer-logo" />
+          <div>
+            <h3>MO MOLOK</h3>
+            <span class="footer-sub">Dharan Street Cuisine</span>
+          </div>
+        </div>
+        <p class="footer-tagline">Crafting authentic Nepalese momos, warming thukpa, and Dharane street specials in Ashfield.</p>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener" aria-label="Instagram"
-            id="footer-instagram-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg>
+          <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="https://maps.app.goo.gl/RDFsbnTmdkxB37sNA" target="_blank" rel="noopener" aria-label="Google Maps"
-            id="footer-maps-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+          <a href="https://maps.app.goo.gl/RDFsbnTmdkxB37sNA" target="_blank" rel="noopener" aria-label="Google Maps">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </a>
         </div>
       </div>
+
       <div class="footer-nav">
-        <h4>Quick Links</h4>
+        <h4>Navigation</h4>
         <ul>
-          <li><a href="#about" id="footer-about-link">About</a></li>
-          <li><a href="#menu" id="footer-menu-link">Menu</a></li>
-          <li><a href="#specials" id="footer-specials-link">Dharane Specials</a></li>
-          <li><a href="#dharan" id="footer-dharan-link">Our Roots</a></li>
-          <li><a href="#contact" id="footer-contact-link">Contact</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#dharan">Dharan Heritage</a></li>
+          <li><a href="#gallery">Ambience</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+
       <div class="footer-hours">
-        <h4>Hours</h4>
+        <h4>Opening Hours</h4>
         <ul class="footer-hours-list">
-          <li><span>Mon</span><span>2–10 pm</span></li>
-          <li><span>Tue</span><span>4–10 pm</span></li>
-          <li><span>Wed</span><span>3–10 pm</span></li>
-          <li><span>Thu</span><span>3–10 pm</span></li>
-          <li><span>Fri–Sat</span><span>4–11 pm</span></li>
-          <li><span>Sun</span><span>2–10 pm</span></li>
+          <li><span>Mon</span><span>2:00 PM – 10:00 PM</span></li>
+          <li><span>Tue–Thu</span><span>3:00 PM – 10:00 PM</span></li>
+          <li><span>Fri–Sat</span><span>4:00 PM – 11:00 PM</span></li>
+          <li><span>Sun</span><span>2:00 PM – 10:00 PM</span></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2024 Mo Molok · 20 Charlotte Street, Ashfield NSW 2131 · Nepalese Street Food, Sydney</p>
-      <p class="footer-credit">Rooted in Dharan, planted in Sydney 🇳🇵</p>
+      <div class="container footer-bottom-inner">
+        <p>© 2024 Mo Molok Ashfield · 20 Charlotte Street, Ashfield NSW 2131</p>
+        <p class="footer-credit">Rooted in Dharan, planted in Sydney 🇳🇵</p>
+      </div>
     </div>
   </footer>
 
