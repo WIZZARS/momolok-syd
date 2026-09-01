@@ -245,10 +245,168 @@
   <!-- ===== MENU SECTION ===== -->
   <section id="menu" class="section menu-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Artisanal Offerings</span>
-        <h2 class="section-title">The Culinary Menu</h2>
-        <p class="section-desc">Explore our hand-folded momos, signature Dharane street specials, and authentic Nepalese comfort food.</p>
+      
+      <!-- ===== CIAO ENERGY-INSPIRED SIGNATURE GASTRONOMY STAGE ===== -->
+      <div class="showcase-stage" id="showcase-stage">
+        <!-- Dynamic Gradient Aura -->
+        <div class="showcase-aura" id="showcase-aura"></div>
+        <div class="showcase-glow-radial"></div>
+
+        <!-- HUD Corner Brackets & Metadata -->
+        <div class="showcase-hud">
+          <div class="hud-corner hud-tl">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="none"><path d="M1 15V3C1 1.89543 1.89543 1 3 1H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="hud-label">EST. DHARAN, NEPAL</span>
+          </div>
+          <div class="hud-corner hud-tr">
+            <span class="hud-label">ASHFIELD, SYDNEY</span>
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="none"><path d="M15 15V3C15 1.89543 14.1046 1 13 1H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Stage Header & Kinetic Title -->
+        <div class="showcase-header">
+          <div class="showcase-badge">
+            <span class="badge-fire-dot"></span>
+            <span id="showcase-cat-label">SIGNATURE GASTRONOMY · 01/06</span>
+          </div>
+
+          <div class="showcase-title-box">
+            <h2 class="showcase-title" id="showcase-title">
+              <span class="char-mask" id="showcase-title-line1">Chicken Steamed</span>
+              <span class="char-mask" id="showcase-title-line2"><em>Momo Platter</em></span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Stage Viewport -->
+        <div class="showcase-viewport" id="showcase-viewport">
+          <!-- Left Arrow Navigation -->
+          <button class="stage-nav-arrow arrow-prev" id="showcase-prev-btn" aria-label="Previous Signature Dish">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- 3D Stage Track -->
+          <div class="stage-track" id="stage-track">
+            <!-- Flanking Left Preview Plate -->
+            <div class="stage-plate plate-prev" id="plate-prev" role="button" tabindex="0" aria-label="View Previous Dish">
+              <div class="plate-img-wrap">
+                <img src="panipuri_dish.jpg" alt="Previous Dish" id="img-plate-prev" />
+              </div>
+              <span class="plate-mini-tag" id="tag-plate-prev">Street Panipuri</span>
+            </div>
+
+            <!-- Active Center Hero Plate -->
+            <div class="stage-plate plate-active" id="plate-active">
+              <div class="plate-steam-glow"></div>
+              <div class="plate-flame-halo"></div>
+              <div class="plate-img-wrap main-plate-wrap">
+                <img src="steamed_momo_gourmet.png" alt="Chicken Steamed Momo" id="img-plate-active" />
+              </div>
+              <div class="plate-shadow"></div>
+            </div>
+
+            <!-- Flanking Right Preview Plate -->
+            <div class="stage-plate plate-next" id="plate-next" role="button" tabindex="0" aria-label="View Next Dish">
+              <div class="plate-img-wrap">
+                <img src="steamed_momo_gourmet.png" alt="Next Dish" id="img-plate-next" />
+              </div>
+              <span class="plate-mini-tag" id="tag-plate-next">Chicken Jhol Momo</span>
+            </div>
+          </div>
+
+          <!-- Right Arrow Navigation -->
+          <button class="stage-nav-arrow arrow-next" id="showcase-next-btn" aria-label="Next Signature Dish">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Sensory Profile Matrix & Tasting Card -->
+        <div class="showcase-sensory-box" id="showcase-sensory-box">
+          <div class="sensory-bracket bracket-tl"></div>
+          <div class="sensory-bracket bracket-br"></div>
+
+          <div class="sensory-content-grid">
+            <!-- Description & Flavor Profile -->
+            <div class="sensory-desc-col">
+              <div class="sensory-subtitle-row">
+                <span class="sensory-origin" id="showcase-origin">📍 Dharan Hill Recipe</span>
+                <span class="sensory-spice-meter" id="showcase-spice">Spice: 🌶️ Mild Warmth</span>
+              </div>
+              <p class="sensory-desc-text" id="showcase-desc">
+                Handcrafted daily with tender minced chicken, fresh mountain herbs, and a delicate touch of roasted Himalayan timur pepper. Served steaming hot with house sesame-chili achar.
+              </p>
+            </div>
+
+            <!-- Pricing & Action Controls -->
+            <div class="sensory-action-col">
+              <div class="sensory-price-group">
+                <span class="price-label">Artisanal Price</span>
+                <span class="price-val" id="showcase-price">$16.50</span>
+              </div>
+              <div class="sensory-btn-group">
+                <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm showcase-order-btn" id="showcase-order-cta">
+                  <span>Order Now</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#full-menu-start" class="btn btn-secondary btn-sm" id="showcase-browse-all">
+                  <span>View All 30+</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Liquid Metaball SVG Pagination -->
+        <div class="showcase-pagination-wrap">
+          <div class="liquid-track-container">
+            <svg class="liquid-pagination-svg" viewBox="0 0 1000 40" preserveAspectRatio="none">
+              <defs>
+                <filter id="momo-liquid-filter">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="4.5" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" />
+                </filter>
+                <linearGradient id="momo-bar-gradient" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#E5A93C" />
+                  <stop offset="20%" stop-color="#FF3838" />
+                  <stop offset="40%" stop-color="#38B07D" />
+                  <stop offset="60%" stop-color="#E89638" />
+                  <stop offset="80%" stop-color="#DE5E34" />
+                  <stop offset="100%" stop-color="#FFA834" />
+                </linearGradient>
+              </defs>
+              <g filter="url(#momo-liquid-filter)">
+                <rect class="liquid-bar" x="0" y="16" width="1000" height="8" rx="4" fill="url(#momo-bar-gradient)" />
+                <circle class="liquid-dot" id="liquid-dot" cx="83" cy="20" r="16" fill="url(#momo-bar-gradient)" />
+              </g>
+            </svg>
+
+            <!-- Clickable Checkpoint Triggers -->
+            <div class="pagination-checkpoints" id="pagination-checkpoints">
+              <button class="checkpoint-btn active" data-index="0" aria-label="Go to Chicken Steamed Momo"><span>01</span></button>
+              <button class="checkpoint-btn" data-index="1" aria-label="Go to Chicken Jhol Momo"><span>02</span></button>
+              <button class="checkpoint-btn" data-index="2" aria-label="Go to Steamed Vegan Momo"><span>03</span></button>
+              <button class="checkpoint-btn" data-index="3" aria-label="Go to Dharane Egg Roll"><span>04</span></button>
+              <button class="checkpoint-btn" data-index="4" aria-label="Go to Chicken Thukpa"><span>05</span></button>
+              <button class="checkpoint-btn" data-index="5" aria-label="Go to Artisanal Mango Lassi"><span>06</span></button>
+            </div>
+          </div>
+          <div class="stage-swipe-hint">
+            <span class="swipe-hint-icon">⇄</span>
+            <span>Drag, swipe or use arrow keys to explore dishes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FULL ARTISANAL MENU DIRECTORY ===== -->
+      <div class="section-header menu-full-header" id="full-menu-start">
+        <span class="section-eyebrow">Complete Catalogue</span>
+        <h2 class="section-title">The Full Artisanal Menu</h2>
+        <p class="section-desc">Hand-folded momos, signature Dharane street specials, and authentic Nepalese comfort food prepared fresh in Ashfield.</p>
       </div>
 
       <!-- Search & Filter Controls -->

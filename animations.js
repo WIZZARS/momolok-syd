@@ -91,7 +91,7 @@
      ════════════════════════════════════════════════════ */
   function initScrollRevealGSAP() {
     const revealElements = document.querySelectorAll(
-      '.about-text-col, .about-visual-col, .promise-card, .menu-card, ' +
+      '.about-text-col, .about-visual-col, .promise-card, .showcase-stage, .menu-card, ' +
       '.dharan-pillar-card, .gallery-item, .review-card, .contact-card, ' +
       '.section-eyebrow'
     );
