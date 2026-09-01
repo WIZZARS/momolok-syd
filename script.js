@@ -44,18 +44,29 @@
     }, { passive: true });
 
     if (hamburger) {
-      hamburger.addEventListener('click', () => {
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         const isOpen = navbar.classList.toggle('menu-open');
         hamburger.setAttribute('aria-expanded', String(isOpen));
         document.body.style.overflow = isOpen ? 'hidden' : '';
       });
 
-      document.querySelectorAll('.nav-link').forEach(link => {
+      // Close mobile drawer when clicking any link
+      document.querySelectorAll('.nav-link, .mobile-drawer-footer a, #drawer-reserve-btn').forEach(link => {
         link.addEventListener('click', () => {
           navbar.classList.remove('menu-open');
           hamburger.setAttribute('aria-expanded', 'false');
           document.body.style.overflow = '';
         });
+      });
+
+      // Close mobile drawer on escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navbar.classList.contains('menu-open')) {
+          navbar.classList.remove('menu-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
       });
     }
   }
@@ -143,7 +154,11 @@
     const modal = document.getElementById('reservation-modal');
     const openBtns = [
       document.getElementById('open-reserve-btn'),
-      document.getElementById('hero-reserve-btn')
+      document.getElementById('hero-reserve-btn'),
+      document.getElementById('drawer-reserve-btn'),
+      document.getElementById('mob-btn-reserve')
+      document.getElementById('mob-btn-reserve'),
+      document.getElementById('showcase-reserve-btn')
     ];
     const closeBtn = document.getElementById('close-modal-btn');
     const form = document.getElementById('reservation-form');
@@ -328,7 +343,7 @@
         spice: "Spice: 🌶️ Mild Warmth",
         desc: "Handcrafted daily with tender minced chicken, fresh mountain herbs, and a delicate touch of roasted Himalayan timur pepper. Served steaming hot with house sesame-chili achar.",
         price: "$16.50",
-        img: "steamed_momo_gourmet.png",
+        img: "dish-steamed-momo.svg",
         primary: "#E5A93C",
         secondary: "#FF2E2E",
         glow: "rgba(229, 169, 60, 0.45)"
@@ -341,7 +356,7 @@
         spice: "Spice: 🌶️🌶️ Medium Spicy",
         desc: "Dharan's most coveted comfort dish. Hand-pleated juicy dumplings submerged in a warm, fragrant slow-simmered roasted sesame, tomato, and Timur chili broth.",
         price: "$18.99",
-        img: "steamed_momo_gourmet.png",
+        img: "dish-jhol-momo.svg",
         primary: "#FF3838",
         secondary: "#9E0E18",
         glow: "rgba(255, 56, 56, 0.5)"
@@ -354,7 +369,7 @@
         spice: "Spice: 🌿 Fresh & Mild",
         desc: "Delicately pleated translucent wrappers filled with finely minced wild mushrooms, mountain cabbage, ginger root, and Himalayan herbs.",
         price: "$15.50",
-        img: "momo_dish.jpg",
+        img: "dish-vegan-momo.svg",
         primary: "#38B07D",
         secondary: "#0E3D28",
         glow: "rgba(56, 176, 125, 0.45)"
@@ -367,7 +382,7 @@
         spice: "Spice: 🌶️ Zesty Street Spice",
         desc: "Flaky golden paratha flatbread layered with fluffy farm egg, stuffed with wok-tossed chowmein noodles, crunchy red onions, and spiced tomato reduction.",
         price: "$12.99",
-        img: "dharane_special_thali.png",
+        img: "dish-egg-roll.svg",
         primary: "#E89638",
         secondary: "#944208",
         glow: "rgba(232, 150, 56, 0.45)"
@@ -380,7 +395,7 @@
         spice: "Spice: 🌶️ Warm Aromatic",
         desc: "Hearty mountain wheat noodles in rich aromatic chicken stock, garnished with slow-braised chicken shreds, crisp greens, coriander, and spiced chili oil.",
         price: "$15.99",
-        img: "thukpa_gourmet.png",
+        img: "dish-thukpa.svg",
         primary: "#DE5E34",
         secondary: "#5E1D0C",
         glow: "rgba(222, 94, 52, 0.45)"
@@ -393,7 +408,7 @@
         spice: "Flavor: 🥭 Sweet & Velvety",
         desc: "Rich, creamy cultured yogurt blended with sun-ripened Alphonso mango pulp, a whisper of Himalayan cardamom, and pistachio dust. The perfect spice balancer.",
         price: "$9.99",
-        img: "panipuri_dish.jpg",
+        img: "dish-mango-lassi.svg",
         primary: "#FFA834",
         secondary: "#7A3600",
         glow: "rgba(255, 168, 52, 0.45)"
@@ -560,12 +575,463 @@
     updateShowcase(0, 1);
   }
 
+  /* ════════════════════════════════════════════════════
+     INTERACTIVE INSTAGRAM SOCIAL LOUNGE & REELS
+     ════════════════════════════════════════════════════ */
+  function initInstagramSocialLounge() {
+    const gallerySection = document.getElementById('gallery');
+    if (!gallerySection) return;
+
+    // Instagram Posts Data Registry
+    const instaPosts = [
+      {
+        id: 0,
+        img: "dish-jhol-momo.svg",
+        badge: "🎬 REEL · 34.2K Views",
+        caption: "The legendary Jhol broth slow-simmering on a misty Sydney evening. Roasted sesame, charred tomatoes, and Himalayan timur pepper. 🥟✨ Handcrafted fresh daily in Ashfield.",
+        tags: "#MoMolok #DharanFood #SydneyEats #JholMomo #HimalayanSpices",
+        likes: 1840,
+        time: "2 HOURS AGO",
+        comments: [
+          { user: "sydney_foodie_jen", text: "The jhol momo broth is unreal! Best in Sydney 🔥", time: "1h" },
+          { user: "bipin_dharan", text: "Takes me right back to Bhanu Chowk. Pure nostalgia!", time: "1h" },
+          { user: "ashfield_local", text: "We ordered 3 plates yesterday, heading back this Friday! 🤤", time: "45m" }
+        ]
+      },
+      {
+        id: 1,
+        img: "venue-ambience.svg",
+        badge: "📷 MULTI-PHOTO · 1/3",
+        caption: "Cozy corners, warm timber, and the comforting aroma of hand-pleated dumplings. Your home away from Dharan in Ashfield. 🏮🪵 Reserve your table for dinner!",
+        tags: "#MoMolokAmbience #SydneyDining #AshfieldEats #CozyVibes",
+        likes: 982,
+        time: "5 HOURS AGO",
+        comments: [
+          { user: "claire_eats_syd", text: "Such a beautiful interior! Love the warm lighting ✨", time: "4h" },
+          { user: "nepal_diaries", text: "Feels so authentic and welcoming. Great atmosphere!", time: "2h" }
+        ]
+      },
+      {
+        id: 2,
+        img: "dish-egg-roll.svg",
+        badge: "🔥 VIRAL REEL · 42.8K Views",
+        caption: "Have you ever tasted the iconic Dharane Egg Roll stuffed with high-heat wok chowmein? 🤤 Flaky, crispy, and fiery!",
+        tags: "#DharaneEggRoll #StreetFood #SydneyStreetEats #WokChowmein",
+        likes: 2410,
+        time: "1 DAY AGO",
+        comments: [
+          { user: "marcus_foodexplorer", text: "That egg roll wrap is enormous! Crunch is crazy 🔥", time: "1d" },
+          { user: "alina.grg", text: "Dharan street style in Sydney?! Need to visit ASAP!", time: "20h" }
+        ]
+      },
+      {
+        id: 3,
+        img: "dish-thukpa.svg",
+        badge: "🍜 NOODLE SOUP",
+        caption: "Mountain warmth in a bowl. Slow-braised chicken, handmade noodles, and aromatic herbs for the Sydney evening chill. 🍜",
+        tags: "#Thukpa #ComfortFood #WarmingBroth #WinterEats",
+        likes: 1120,
+        time: "2 DAYS AGO",
+        comments: [
+          { user: "david_h", text: "The broth depth is incredible. So warming and restorative.", time: "2d" },
+          { user: "sam_eats_daily", text: "Generous portions and packed with flavor!", time: "1d" }
+        ]
+      },
+      {
+        id: 4,
+        img: "dish-panipuri.svg",
+        badge: "💥 GUEST TAGGED · 21.5K Views",
+        caption: "“Hands down the crunchiest Panipuri in Sydney!” — @sydneyfoodguide testing our ice-cold spicy mint tamarind water shots! 💥",
+        tags: "#PanipuriShots #StreetFoodLovers #SydneyFoodGuide",
+        likes: 1540,
+        time: "3 DAYS AGO",
+        comments: [
+          { user: "sydneyfoodguide", text: "That mint tamarind water was perfection! 💯", time: "3d" },
+          { user: "priya_k", text: "The crunch is everything! 👏", time: "2d" }
+        ]
+      },
+      {
+        id: 5,
+        img: "dharan-mountains.svg",
+        badge: "🏔️ DHARAN HERITAGE",
+        caption: "Where it all started. The misty hills and sunset ridges of Dharan, Nepal. Bringing these timeless flavours to Australia. 🏔️🇳🇵",
+        tags: "#DharanNepal #HimalayanHeritage #CulinaryRoots #SydneyHospitality",
+        likes: 1310,
+        time: "4 DAYS AGO",
+        comments: [
+          { user: "anup_shrestha", text: "Dharan proud! Amazing to see our food represented so well in Sydney. 🇳🇵", time: "4d" },
+          { user: "sarah_travels", text: "Can't wait to visit the restaurant and Nepal one day!", time: "3d" }
+        ]
+      }
+    ];
+
+    // Story Highlights Data
+    const storiesData = [
+      {
+        user: "momoloksyd",
+        time: "1h",
+        img: "dish-steamed-momo.svg",
+        caption: "🥟 Hand-pleating 400+ fresh momos this morning for lunch service!"
+      },
+      {
+        user: "momoloksyd",
+        time: "3h",
+        img: "dish-thukpa.svg",
+        caption: "🍜 Fresh batch of slow-simmered sesame tomato Jhol broth ready!"
+      },
+      {
+        user: "momoloksyd",
+        time: "5h",
+        img: "dish-egg-roll.svg",
+        caption: "🌶️ Wok-fired Dharane Egg Rolls sizzling on the street griddle!"
+      },
+      {
+        user: "momoloksyd",
+        time: "8h",
+        img: "venue-ambience.svg",
+        caption: "✨ Evening vibes at Mo Molok Ashfield — tables are warm and ready!"
+      },
+      {
+        user: "momoloksyd",
+        time: "12h",
+        img: "dharan-mountains.svg",
+        caption: "🏔️ Morning mist over Dharan Clock Tower & Eastern Nepal hills."
+      },
+      {
+        user: "momoloksyd",
+        time: "16h",
+        img: "dish-panipuri.svg",
+        caption: "🥭 Ice-cold mango lassi & spicy mint panipuri shots!"
+      }
+    ];
+
+    // 1. Category Filter Tabs
+    const instaTabs = document.querySelectorAll('.insta-tab');
+    const instaCards = document.querySelectorAll('.insta-card');
+
+    instaTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        instaTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const cat = tab.getAttribute('data-insta-cat') || 'all';
+        instaCards.forEach(card => {
+          const cardCats = card.getAttribute('data-cat') || '';
+          if (cat === 'all' || cardCats.includes(cat)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 2. Interactive Follow Button
+    const followTrigger = document.getElementById('insta-follow-trigger');
+    const followBtnText = document.getElementById('follow-btn-text');
+    let isFollowing = false;
+
+    if (followTrigger) {
+      followTrigger.addEventListener('click', () => {
+        isFollowing = !isFollowing;
+        if (isFollowing) {
+          followTrigger.classList.add('following');
+          if (followBtnText) followBtnText.textContent = 'Following ✓';
+          spawnFloatingEmoji(window.innerWidth / 2, window.innerHeight / 2, '❤️');
+        } else {
+          followTrigger.classList.remove('following');
+          if (followBtnText) followBtnText.textContent = '+ Follow';
+        }
+      });
+    }
+
+    // 3. Card Heart Like Buttons
+    document.querySelectorAll('.insta-card .btn-like').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.insta-card');
+        const countEl = card.querySelector('.like-count');
+        const heartSpan = btn.querySelector('.heart-icon');
+        const isLiked = btn.classList.toggle('heart-active');
+
+        let count = parseInt(countEl.textContent.replace(/,/g, '') || '0', 10);
+        if (isLiked) {
+          count++;
+          heartSpan.textContent = '❤️';
+          const rect = btn.getBoundingClientRect();
+          spawnFloatingEmoji(rect.left + 15, rect.top, '❤️');
+        } else {
+          count--;
+          heartSpan.textContent = '🤍';
+        }
+        countEl.textContent = count.toLocaleString();
+      });
+    });
+
+    // 4. Post Lightbox Modal
+    const postModal = document.getElementById('insta-post-modal');
+    const postCloseBtn = document.getElementById('insta-post-close');
+    const modalPostImg = document.getElementById('modal-post-img');
+    const modalBadge = document.getElementById('modal-media-badge');
+    const modalCommentsFeed = document.getElementById('modal-comments-feed');
+    const modalLikeNum = document.getElementById('modal-like-num');
+    const modalCommentForm = document.getElementById('modal-comment-form');
+    const modalCommentInput = document.getElementById('modal-comment-input');
+    const modalLikeTrigger = document.querySelector('.modal-like-trigger');
+    let currentModalPostId = 0;
+
+    function openPostModal(postId) {
+      currentModalPostId = postId;
+      const post = instaPosts[postId];
+      if (!post || !postModal) return;
+
+      if (modalPostImg) modalPostImg.src = post.img;
+      if (modalBadge) modalBadge.textContent = post.badge;
+      if (modalLikeNum) modalLikeNum.textContent = post.likes.toLocaleString();
+
+      // Render Comments
+      if (modalCommentsFeed) {
+        let commentsHTML = `
+          <div class="modal-comment-item">
+            <img src="logo.jpg" alt="momoloksyd" class="comment-user-avatar" />
+            <div class="comment-body">
+              <strong>momoloksyd</strong>
+              <span>${post.caption} <span style="color:#0095f6">${post.tags}</span></span>
+            </div>
+          </div>
+        `;
+
+        post.comments.forEach(c => {
+          commentsHTML += `
+            <div class="modal-comment-item">
+              <div class="comment-user-avatar">${c.user.charAt(0).toUpperCase()}</div>
+              <div class="comment-body">
+                <strong>${c.user}</strong>
+                <span>${c.text}</span>
+              </div>
+            </div>
+          `;
+        });
+
+        modalCommentsFeed.innerHTML = commentsHTML;
+      }
+
+      postModal.classList.add('open');
+      postModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePostModal() {
+      if (!postModal) return;
+      postModal.classList.remove('open');
+      postModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Open on card click
+    document.querySelectorAll('.insta-card').forEach(card => {
+      const mediaWrap = card.querySelector('.insta-media-wrap');
+      const commentBtn = card.querySelector('.btn-comment');
+      const postId = parseInt(card.getAttribute('data-post-id') || '0', 10);
+
+      if (mediaWrap) {
+        mediaWrap.addEventListener('click', () => openPostModal(postId));
+      }
+      if (commentBtn) {
+        commentBtn.addEventListener('click', () => openPostModal(postId));
+      }
+    });
+
+    if (postCloseBtn) postCloseBtn.addEventListener('click', closePostModal);
+    if (postModal) {
+      postModal.addEventListener('click', (e) => {
+        if (e.target === postModal) closePostModal();
+      });
+    }
+
+    // Live Add Comment
+    if (modalCommentForm) {
+      modalCommentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = modalCommentInput?.value.trim();
+        if (!text) return;
+
+        const newCommentItem = document.createElement('div');
+        newCommentItem.className = 'modal-comment-item';
+        newCommentItem.innerHTML = `
+          <div class="comment-user-avatar" style="background:#ff2e2e">Y</div>
+          <div class="comment-body">
+            <strong>you</strong>
+            <span>${text}</span>
+          </div>
+        `;
+        modalCommentsFeed.appendChild(newCommentItem);
+        modalCommentInput.value = '';
+        modalCommentsFeed.scrollTop = modalCommentsFeed.scrollHeight;
+
+        // Spawn floating emoji
+        spawnFloatingEmoji(window.innerWidth / 2, window.innerHeight / 2, '💬');
+      });
+    }
+
+    // Modal Like Button
+    if (modalLikeTrigger) {
+      modalLikeTrigger.addEventListener('click', () => {
+        const isLiked = modalLikeTrigger.classList.toggle('heart-active');
+        const heartIcon = modalLikeTrigger.querySelector('.modal-heart-icon');
+        let likes = instaPosts[currentModalPostId].likes;
+
+        if (isLiked) {
+          likes++;
+          if (heartIcon) heartIcon.textContent = '❤️';
+          spawnFloatingEmoji(window.innerWidth / 2, window.innerHeight / 2, '❤️');
+        } else {
+          if (heartIcon) heartIcon.textContent = '🤍';
+        }
+        if (modalLikeNum) modalLikeNum.textContent = likes.toLocaleString();
+      });
+    }
+
+    // 5. Fullscreen Instagram Story Viewer Modal
+    const storyModal = document.getElementById('insta-story-modal');
+    const storyCloseBtn = document.getElementById('story-close-btn');
+    const storyPauseBtn = document.getElementById('story-pause-btn');
+    const storyCurrentImg = document.getElementById('story-current-img');
+    const storyCurrentCaption = document.getElementById('story-current-caption');
+    const storyProgressBarWrap = document.getElementById('story-progress-bars');
+    const storyTapPrev = document.getElementById('story-tap-prev');
+    const storyTapNext = document.getElementById('story-tap-next');
+    const mainAvatarTrigger = document.getElementById('insta-main-avatar');
+    const storyBubbles = document.querySelectorAll('.story-bubble');
+
+    let currentStoryIdx = 0;
+    let storyTimer = null;
+    let storyProgress = 0;
+    let isStoryPaused = false;
+
+    function renderStoryProgressBars() {
+      if (!storyProgressBarWrap) return;
+      let barsHTML = '';
+      storiesData.forEach((_, i) => {
+        barsHTML += `<div class="story-bar"><div class="story-bar-fill" id="story-bar-${i}"></div></div>`;
+      });
+      storyProgressBarWrap.innerHTML = barsHTML;
+    }
+
+    function openStoryViewer(startIdx = 0) {
+      currentStoryIdx = startIdx;
+      renderStoryProgressBars();
+      showStory(currentStoryIdx);
+
+      if (storyModal) {
+        storyModal.classList.add('open');
+        storyModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeStoryViewer() {
+      if (storyTimer) clearInterval(storyTimer);
+      if (storyModal) {
+        storyModal.classList.remove('open');
+        storyModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function showStory(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= storiesData.length) {
+        closeStoryViewer();
+        return;
+      }
+      currentStoryIdx = idx;
+      const story = storiesData[idx];
+
+      if (storyCurrentImg) storyCurrentImg.src = story.img;
+      if (storyCurrentCaption) storyCurrentCaption.textContent = story.caption;
+
+      // Reset bars
+      storiesData.forEach((_, i) => {
+        const fillEl = document.getElementById(`story-bar-${i}`);
+        if (!fillEl) return;
+        if (i < idx) fillEl.style.width = '100%';
+        else if (i > idx) fillEl.style.width = '0%';
+      });
+
+      // Progress animation
+      if (storyTimer) clearInterval(storyTimer);
+      storyProgress = 0;
+      isStoryPaused = false;
+      if (storyPauseBtn) storyPauseBtn.textContent = '❚❚';
+
+      const currentBarFill = document.getElementById(`story-bar-${idx}`);
+      const durationMs = 5000;
+      const stepMs = 50;
+
+      storyTimer = setInterval(() => {
+        if (isStoryPaused) return;
+        storyProgress += (stepMs / durationMs) * 100;
+        if (currentBarFill) currentBarFill.style.width = `${Math.min(storyProgress, 100)}%`;
+
+        if (storyProgress >= 100) {
+          clearInterval(storyTimer);
+          showStory(currentStoryIdx + 1);
+        }
+      }, stepMs);
+    }
+
+    if (mainAvatarTrigger) {
+      mainAvatarTrigger.addEventListener('click', () => openStoryViewer(0));
+    }
+
+    storyBubbles.forEach(b => {
+      b.addEventListener('click', () => {
+        const idx = parseInt(b.getAttribute('data-story-index') || '0', 10);
+        openStoryViewer(idx);
+      });
+    });
+
+    if (storyCloseBtn) storyCloseBtn.addEventListener('click', closeStoryViewer);
+    if (storyTapPrev) storyTapPrev.addEventListener('click', () => showStory(currentStoryIdx - 1));
+    if (storyTapNext) storyTapNext.addEventListener('click', () => showStory(currentStoryIdx + 1));
+
+    if (storyPauseBtn) {
+      storyPauseBtn.addEventListener('click', () => {
+        isStoryPaused = !isStoryPaused;
+        storyPauseBtn.textContent = isStoryPaused ? '▶' : '❚❚';
+      });
+    }
+
+    // Story Emoji Reactions
+    document.querySelectorAll('.story-emoji-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const emoji = btn.getAttribute('data-emoji') || '❤️';
+        const rect = btn.getBoundingClientRect();
+        spawnFloatingEmoji(rect.left + 15, rect.top - 20, emoji);
+      });
+    });
+
+    function spawnFloatingEmoji(x, y, char = '❤️') {
+      const el = document.createElement('div');
+      el.className = 'floating-emoji';
+      el.textContent = char;
+      el.style.left = `${x}px`;
+      el.style.top = `${y}px`;
+      document.body.appendChild(el);
+      setTimeout(() => {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      }, 1400);
+    }
+  }
+
   /* ── INITIALIZE ALL COMPONENTS ── */
   function init() {
     initPreloader();
     initNavbar();
     updateLiveStatus();
     initSignatureShowcase();
+    initInstagramSocialLounge();
     initMenuSearchAndFilter();
     initReservationModal();
     initScrollReveal();

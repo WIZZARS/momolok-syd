@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Mo Molok — Authentic Nepalese Gastronomy & Dharan Street Cuisine | Ashfield, Sydney</title>
   <meta name="description"
     content="Experience the refined flavors of Dharan, Nepal in Ashfield, Sydney. Artisanal hand-folded momos, warming thukpa broth, and Dharane street specials in a warm boutique eatery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   
@@ -61,17 +61,28 @@
         </div>
       </a>
 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link">Our Story</a></li>
-        <li><a href="#menu" class="nav-link">Menu</a></li>
-        <li><a href="#dharan" class="nav-link">Dharan Heritage</a></li>
-        <li><a href="#gallery" class="nav-link">Ambience</a></li>
-        <li><a href="#contact" class="nav-link">Find Us</a></li>
-      </ul>
+      <div class="nav-links-drawer" id="nav-links-drawer">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">Our Story</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#dharan" class="nav-link">Dharan Heritage</a></li>
+          <li><a href="#gallery" class="nav-link">Ambience</a></li>
+          <li><a href="#contact" class="nav-link">Find Us</a></li>
+        </ul>
+
+        <div class="mobile-drawer-footer">
+          <button class="btn btn-primary btn-full" id="drawer-reserve-btn">Reserve a Table</button>
+          <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">Order via UberEats 🛵</a>
+          <div class="drawer-contact-info">
+            <p>📍 20 Charlotte Street, Ashfield NSW 2131</p>
+            <p>📞 (02) 9798 8888 · Open 2:00 PM – 10:00 PM</p>
+          </div>
+        </div>
+      </div>
 
       <div class="nav-actions">
         <button class="btn btn-outline-sm" id="open-reserve-btn">Reserve a Table</button>
-        <a href="https://www.ubereats.com" target="_blank" rel="noopener" class="nav-cta" id="nav-order-btn">Order Online</a>
+        <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="nav-cta" id="nav-order-btn">Order Online</a>
         <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -185,7 +196,7 @@
 
         <div class="about-visual-col">
           <div class="about-image-card">
-            <img src="restaurant_interior_dharan.png" alt="Mo Molok Dining Ambience" class="about-img" />
+            <img src="venue-ambience.svg" alt="Mo Molok Dining Ambience" class="about-img" />
             <div class="about-img-badge">
               <span>Warm & Welcoming Atmosphere</span>
             </div>
@@ -293,7 +304,7 @@
             <!-- Flanking Left Preview Plate -->
             <div class="stage-plate plate-prev" id="plate-prev" role="button" tabindex="0" aria-label="View Previous Dish">
               <div class="plate-img-wrap">
-                <img src="panipuri_dish.jpg" alt="Previous Dish" id="img-plate-prev" />
+                <img src="dish-panipuri.svg" alt="Previous Dish" id="img-plate-prev" />
               </div>
               <span class="plate-mini-tag" id="tag-plate-prev">Street Panipuri</span>
             </div>
@@ -303,7 +314,7 @@
               <div class="plate-steam-glow"></div>
               <div class="plate-flame-halo"></div>
               <div class="plate-img-wrap main-plate-wrap">
-                <img src="steamed_momo_gourmet.png" alt="Chicken Steamed Momo" id="img-plate-active" />
+                <img src="dish-steamed-momo.svg" alt="Chicken Steamed Momo" id="img-plate-active" />
               </div>
               <div class="plate-shadow"></div>
             </div>
@@ -311,7 +322,7 @@
             <!-- Flanking Right Preview Plate -->
             <div class="stage-plate plate-next" id="plate-next" role="button" tabindex="0" aria-label="View Next Dish">
               <div class="plate-img-wrap">
-                <img src="steamed_momo_gourmet.png" alt="Next Dish" id="img-plate-next" />
+                <img src="dish-jhol-momo.svg" alt="Next Dish" id="img-plate-next" />
               </div>
               <span class="plate-mini-tag" id="tag-plate-next">Chicken Jhol Momo</span>
             </div>
@@ -353,9 +364,9 @@
                   <span>Order Now</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="#full-menu-start" class="btn btn-secondary btn-sm" id="showcase-browse-all">
-                  <span>View All 30+</span>
-                </a>
+                <button class="btn btn-secondary btn-sm" id="showcase-reserve-btn">
+                  <span>Book a Table</span>
+                </button>
               </div>
             </div>
           </div>
@@ -402,30 +413,31 @@
         </div>
       </div>
 
-      <!-- ===== FULL ARTISANAL MENU DIRECTORY ===== -->
-      <div class="section-header menu-full-header" id="full-menu-start">
-        <span class="section-eyebrow">Complete Catalogue</span>
-        <h2 class="section-title">The Full Artisanal Menu</h2>
-        <p class="section-desc">Hand-folded momos, signature Dharane street specials, and authentic Nepalese comfort food prepared fresh in Ashfield.</p>
-      </div>
-
-      <!-- Search & Filter Controls -->
-      <div class="menu-controls">
-        <div class="menu-search-wrap">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="menu-search-input" placeholder="Search dish name, momo, thukpa, spicy..." aria-label="Search Menu" />
-          <button id="clear-search-btn" class="clear-btn" aria-label="Clear Search">&times;</button>
+      <!-- ===== FULL ARTISANAL MENU DIRECTORY (HIDDEN AS REQUESTED) ===== -->
+      <div class="menu-full-directory" id="menu-full-directory" style="display: none;" aria-hidden="true">
+        <div class="section-header menu-full-header" id="full-menu-start">
+          <span class="section-eyebrow">Complete Catalogue</span>
+          <h2 class="section-title">The Full Artisanal Menu</h2>
+          <p class="section-desc">Hand-folded momos, signature Dharane street specials, and authentic Nepalese comfort food prepared fresh in Ashfield.</p>
         </div>
 
-        <div class="menu-tabs" role="tablist" id="menu-tabs">
-          <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Items</button>
-          <button class="tab-btn" data-filter="momo" role="tab">Momos 🥟</button>
-          <button class="tab-btn" data-filter="specials" role="tab">Dharane Specials 🔥</button>
-          <button class="tab-btn" data-filter="noodles" role="tab">Thukpa & Noodles 🍜</button>
-          <button class="tab-btn" data-filter="snacks" role="tab">Snacks 🌶️</button>
-          <button class="tab-btn" data-filter="drinks" role="tab">Drinks 🥤</button>
+        <!-- Search & Filter Controls -->
+        <div class="menu-controls">
+          <div class="menu-search-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="menu-search-input" placeholder="Search dish name, momo, thukpa, spicy..." aria-label="Search Menu" />
+            <button id="clear-search-btn" class="clear-btn" aria-label="Clear Search">&times;</button>
+          </div>
+
+          <div class="menu-tabs" role="tablist" id="menu-tabs">
+            <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Items</button>
+            <button class="tab-btn" data-filter="momo" role="tab">Momos 🥟</button>
+            <button class="tab-btn" data-filter="specials" role="tab">Dharane Specials 🔥</button>
+            <button class="tab-btn" data-filter="noodles" role="tab">Thukpa & Noodles 🍜</button>
+            <button class="tab-btn" data-filter="snacks" role="tab">Snacks 🌶️</button>
+            <button class="tab-btn" data-filter="drinks" role="tab">Drinks 🥤</button>
+          </div>
         </div>
-      </div>
 
       <!-- Menu Grid -->
       <div class="menu-grid" id="menu-grid">
@@ -613,6 +625,7 @@
           </div>
         </article>
       </div>
+      </div>
 
       <!-- Menu CTA -->
       <div class="menu-cta-banner">
@@ -639,7 +652,7 @@
 
       <div class="dharan-grid">
         <div class="dharan-visual-frame">
-          <img src="dharan_mist_mountains.png" alt="Dharan Mountain View" class="dharan-main-img" />
+          <img src="dharan-mountains.svg" alt="Dharan Mountain View" class="dharan-main-img" />
           <div class="dharan-img-overlay-card">
             <span class="dharan-badge">Himalayan Foothills</span>
             <h3>Dharan, Nepal</h3>
@@ -676,45 +689,361 @@
     </div>
   </section>
 
-  <!-- ===== AMBIENCE & GALLERY ===== -->
+  <!-- ===== INTERACTIVE INSTAGRAM SOCIAL LOUNGE & REEL CAROUSEL ===== -->
   <section id="gallery" class="section gallery-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Visual Experience</span>
-        <h2 class="section-title">Moments at Mo Molok</h2>
+      
+      <!-- Instagram Header Showcase -->
+      <div class="insta-profile-card">
+        <div class="insta-profile-left">
+          <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="insta-avatar-wrap" id="insta-main-avatar" aria-label="Open momoloksyd on Instagram">
+            <div class="insta-story-ring"></div>
+            <img src="logo.jpg" alt="momoloksyd Instagram Avatar" class="insta-avatar-img" />
+            <div class="insta-story-badge">+</div>
+          </a>
+
+          <div class="insta-profile-info">
+            <div class="insta-handle-row">
+              <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="insta-handle-link">
+                <h3 class="insta-handle">momoloksyd</h3>
+              </a>
+              <svg class="insta-verified-badge" viewBox="0 0 24 24" width="18" height="18" fill="#3897f0"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.9 14.7l-4.2-4.2 1.4-1.4 2.8 2.8 6.8-6.8 1.4 1.4-8.2 8.2z"/></svg>
+              <span class="insta-tag-location">Ashfield, Sydney NSW</span>
+            </div>
+            
+            <p class="insta-bio">
+              🥟 <strong>momolok (मो मोलोक)</strong> — Authentic Dharan Street Gastronomy & Artisanal Dumplings.<br />
+              🌿 Hand-pleated daily with Himalayan spices · 📍 20 Charlotte St, Ashfield · 🛵 UberEats
+            </p>
+
+            <div class="insta-stats-row">
+              <span><strong>36</strong> posts</span>
+              <span><strong>247</strong> followers</span>
+              <span><strong>40</strong> following</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insta-profile-actions">
+          <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm insta-follow-btn" id="insta-follow-trigger">
+            <span>+ Follow @momoloksyd</span>
+          </a>
+          <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm insta-ext-btn">
+            <span>Instagram Page ↗</span>
+          </a>
+        </div>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item item-large">
-          <img src="restaurant_interior_dharan.png" alt="Boutique Dining Room" />
-          <div class="gallery-overlay">
-            <span>Boutique Dining Atmosphere</span>
+      <!-- Instagram Story Highlights Tray -->
+      <div class="insta-stories-tray" id="insta-stories-tray">
+        <div class="story-bubble" data-story-index="0" role="button" tabindex="0" aria-label="View Fresh Momos Story">
+          <div class="story-ring-wrap">
+            <img src="dish-steamed-momo.svg" alt="Fresh Momos Story" />
           </div>
+          <span class="story-title">🔥 Fresh Momos</span>
         </div>
 
-        <div class="gallery-item">
-          <img src="steamed_momo_gourmet.png" alt="Handfolded Momos" />
-          <div class="gallery-overlay">
-            <span>Fresh Steamed Jhol Momos</span>
+        <div class="story-bubble" data-story-index="1" role="button" tabindex="0" aria-label="View Jhol Broth Story">
+          <div class="story-ring-wrap">
+            <img src="dish-jhol-momo.svg" alt="Jhol Broth Story" />
           </div>
+          <span class="story-title">🍜 Jhol Broth</span>
         </div>
 
-        <div class="gallery-item">
-          <img src="dharane_special_thali.png" alt="Dharane Thali Platter" />
-          <div class="gallery-overlay">
-            <span>Dharane Special Street Thali</span>
+        <div class="story-bubble" data-story-index="2" role="button" tabindex="0" aria-label="View Street Eats Story">
+          <div class="story-ring-wrap">
+            <img src="dish-egg-roll.svg" alt="Street Eats Story" />
           </div>
+          <span class="story-title">🌶️ Street Eats</span>
         </div>
 
-        <div class="gallery-item">
-          <img src="thukpa_gourmet.png" alt="Warming Thukpa Broth" />
-          <div class="gallery-overlay">
-            <span>Signature Thukpa Bowl</span>
+        <div class="story-bubble" data-story-index="3" role="button" tabindex="0" aria-label="View Ambience Story">
+          <div class="story-ring-wrap">
+            <img src="venue-ambience.svg" alt="Ambience Story" />
           </div>
+          <span class="story-title">✨ Ambience</span>
+        </div>
+
+        <div class="story-bubble" data-story-index="4" role="button" tabindex="0" aria-label="View Dharan Roots Story">
+          <div class="story-ring-wrap">
+            <img src="dharan-mountains.svg" alt="Dharan Roots Story" />
+          </div>
+          <span class="story-title">🏔️ Dharan</span>
+        </div>
+
+        <div class="story-bubble" data-story-index="5" role="button" tabindex="0" aria-label="View Coolers Story">
+          <div class="story-ring-wrap">
+            <img src="dish-panipuri.svg" alt="Coolers Story" />
+          </div>
+          <span class="story-title">🥭 Coolers</span>
+        </div>
+      </div>
+
+      <!-- Feed Category Filter Tabs -->
+      <div class="insta-feed-controls">
+        <div class="insta-tabs" role="tablist">
+          <button class="insta-tab active" data-insta-cat="all">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>All Posts</span>
+          </button>
+          <button class="insta-tab" data-insta-cat="reels">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm6 4v8l6-4-6-4z"/></svg>
+            <span>Reels & Videos 🎬</span>
+          </button>
+          <button class="insta-tab" data-insta-cat="food">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.003 7.003 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.003 7.003 0 0 1 11 3.07V3a1 1 0 0 1 2 0v.07A7.003 7.003 0 0 1 18.93 9H19a1 1 0 0 1 0 2h-.07A7.003 7.003 0 0 1 13 16.93z"/></svg>
+            <span>Dharan Gastronomy 🥟</span>
+          </button>
+          <button class="insta-tab" data-insta-cat="tagged">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+            <span>Guest Moments 👥</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Instagram Interactive Post & Reel Carousel -->
+      <div class="insta-feed-grid" id="insta-feed-grid">
+        
+        <!-- POST 1: Viral Reel (Steaming Jhol Momos) -->
+        <article class="insta-card insta-card-reel" data-cat="reels food" data-post-id="0">
+          <div class="insta-media-wrap">
+            <img src="dish-jhol-momo.svg" alt="Steaming Jhol Momos Reel" class="insta-post-img" />
+            <div class="reel-badge"><span class="reel-play-icon">▶</span> 34.2K</div>
+            <div class="reel-audio-tag">♫ Dharan Night Market Vibes · Original Audio</div>
+            <div class="insta-hover-overlay">
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">1,840</span></div>
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> <span>114</span></div>
+            </div>
+          </div>
+          <div class="insta-card-footer">
+            <div class="insta-card-actions">
+              <button class="insta-action-btn btn-like" aria-label="Like Post"><span class="heart-icon">🤍</span></button>
+              <button class="insta-action-btn btn-comment" aria-label="Comment"><span class="comment-icon">💬</span></button>
+              <button class="insta-action-btn btn-share" aria-label="Share"><span class="share-icon">↗</span></button>
+              <button class="insta-action-btn btn-bookmark" aria-label="Bookmark"><span class="bookmark-icon">🏷️</span></button>
+            </div>
+            <p class="insta-caption-text"><strong>momoloksyd</strong> The legendary Jhol broth slow-simmering on a misty Sydney evening. Sesame, charred tomatoes, and Himalayan timur. 🥟✨ #DharanFood #SydneyEats</p>
+          </div>
+        </article>
+
+        <!-- POST 2: Multi-Photo Dining Vibe -->
+        <article class="insta-card" data-cat="all" data-post-id="1">
+          <div class="insta-media-wrap">
+            <img src="venue-ambience.svg" alt="Mo Molok Dining Ambience" class="insta-post-img" />
+            <div class="carousel-badge">1/3 📷</div>
+            <div class="insta-hover-overlay">
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">982</span></div>
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> <span>53</span></div>
+            </div>
+          </div>
+          <div class="insta-card-footer">
+            <div class="insta-card-actions">
+              <button class="insta-action-btn btn-like" aria-label="Like Post"><span class="heart-icon">🤍</span></button>
+              <button class="insta-action-btn btn-comment" aria-label="Comment"><span class="comment-icon">💬</span></button>
+              <button class="insta-action-btn btn-share" aria-label="Share"><span class="share-icon">↗</span></button>
+              <button class="insta-action-btn btn-bookmark" aria-label="Bookmark"><span class="bookmark-icon">🏷️</span></button>
+            </div>
+            <p class="insta-caption-text"><strong>momoloksyd</strong> Cozy corners, warm timber, and the comforting aroma of hand-pleated dumplings. Your home away from Dharan in Ashfield. 🏮🪵</p>
+          </div>
+        </article>
+
+        <!-- POST 3: Viral Dharane Egg Roll & Street Thali -->
+        <article class="insta-card insta-card-reel" data-cat="reels food" data-post-id="2">
+          <div class="insta-media-wrap">
+            <img src="dish-egg-roll.svg" alt="Dharane Special Street Thali" class="insta-post-img" />
+            <div class="reel-badge"><span class="reel-play-icon">▶</span> 42.8K</div>
+            <div class="reel-audio-tag">♫ Wok Fire Sizzle · Eastern Nepal Street Beats</div>
+            <div class="insta-hover-overlay">
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">2,410</span></div>
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> <span>188</span></div>
+            </div>
+          </div>
+          <div class="insta-card-footer">
+            <div class="insta-card-actions">
+              <button class="insta-action-btn btn-like" aria-label="Like Post"><span class="heart-icon">🤍</span></button>
+              <button class="insta-action-btn btn-comment" aria-label="Comment"><span class="comment-icon">💬</span></button>
+              <button class="insta-action-btn btn-share" aria-label="Share"><span class="share-icon">↗</span></button>
+              <button class="insta-action-btn btn-bookmark" aria-label="Bookmark"><span class="bookmark-icon">🏷️</span></button>
+            </div>
+            <p class="insta-caption-text"><strong>momoloksyd</strong> Have you ever tasted the iconic Dharane Egg Roll stuffed with high-heat wok chowmein? 🤤 Flaky, crispy, and spicy! 🔥</p>
+          </div>
+        </article>
+
+        <!-- POST 4: Thukpa Noodle Soup -->
+        <article class="insta-card" data-cat="food" data-post-id="3">
+          <div class="insta-media-wrap">
+            <img src="dish-thukpa.svg" alt="Warming Thukpa Noodle Soup" class="insta-post-img" />
+            <div class="insta-hover-overlay">
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">1,120</span></div>
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> <span>67</span></div>
+            </div>
+          </div>
+          <div class="insta-card-footer">
+            <div class="insta-card-actions">
+              <button class="insta-action-btn btn-like" aria-label="Like Post"><span class="heart-icon">🤍</span></button>
+              <button class="insta-action-btn btn-comment" aria-label="Comment"><span class="comment-icon">💬</span></button>
+              <button class="insta-action-btn btn-share" aria-label="Share"><span class="share-icon">↗</span></button>
+              <button class="insta-action-btn btn-bookmark" aria-label="Bookmark"><span class="bookmark-icon">🏷️</span></button>
+            </div>
+            <p class="insta-caption-text"><strong>momoloksyd</strong> Mountain warmth in a bowl. Slow-braised chicken, handmade noodles, and aromatic herbs for the Sydney evening chill. 🍜</p>
+          </div>
+        </article>
+
+        <!-- POST 5: Street Panipuri Shots (Tagged Guest) -->
+        <article class="insta-card insta-card-reel" data-cat="reels tagged" data-post-id="4">
+          <div class="insta-media-wrap">
+            <img src="dish-panipuri.svg" alt="Street Panipuri Shots" class="insta-post-img" />
+            <div class="reel-badge"><span class="reel-play-icon">▶</span> 21.5K</div>
+            <div class="insta-hover-overlay">
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">1,540</span></div>
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> <span>92</span></div>
+            </div>
+          </div>
+          <div class="insta-card-footer">
+            <div class="insta-card-actions">
+              <button class="insta-action-btn btn-like" aria-label="Like Post"><span class="heart-icon">🤍</span></button>
+              <button class="insta-action-btn btn-comment" aria-label="Comment"><span class="comment-icon">💬</span></button>
+              <button class="insta-action-btn btn-share" aria-label="Share"><span class="share-icon">↗</span></button>
+              <button class="insta-action-btn btn-bookmark" aria-label="Bookmark"><span class="bookmark-icon">🏷️</span></button>
+            </div>
+            <p class="insta-caption-text"><strong>@sydneyfoodguide</strong> tagged <strong>momoloksyd</strong>: “Hands down the crunchiest Panipuri in Sydney!” 💥 Ice cold spicy tamarind shots!</p>
+          </div>
+        </article>
+
+        <!-- POST 6: Dharan Mountains Roots -->
+        <article class="insta-card" data-cat="all" data-post-id="5">
+          <div class="insta-media-wrap">
+            <img src="dharan-mountains.svg" alt="Dharan Mountain Roots" class="insta-post-img" />
+            <div class="insta-hover-overlay">
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">1,310</span></div>
+              <div class="hover-stat"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> <span>78</span></div>
+            </div>
+          </div>
+          <div class="insta-card-footer">
+            <div class="insta-card-actions">
+              <button class="insta-action-btn btn-like" aria-label="Like Post"><span class="heart-icon">🤍</span></button>
+              <button class="insta-action-btn btn-comment" aria-label="Comment"><span class="comment-icon">💬</span></button>
+              <button class="insta-action-btn btn-share" aria-label="Share"><span class="share-icon">↗</span></button>
+              <button class="insta-action-btn btn-bookmark" aria-label="Bookmark"><span class="bookmark-icon">🏷️</span></button>
+            </div>
+            <p class="insta-caption-text"><strong>momoloksyd</strong> Where it all started. The misty hills and sunset ridges of Dharan, Nepal. Bringing these timeless flavours to Australia. 🏔️🇳🇵</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Feed Footer CTA -->
+      <div class="insta-footer-banner">
+        <div class="insta-footer-text">
+          <h4>Tag us in your food stories!</h4>
+          <p>Tag <strong>@momoloksyd</strong> or use <strong>#MoMolokAshfield</strong> to get featured on our live community board.</p>
+        </div>
+        <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Follow @momoloksyd on Instagram ↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== IN-WEBSITE INSTAGRAM POST LIGHTBOX MODAL ===== -->
+  <div class="insta-modal-overlay" id="insta-post-modal" aria-hidden="true" role="dialog" aria-label="Instagram Post Viewer">
+    <div class="insta-modal-container">
+      <button class="insta-modal-close" id="insta-post-close" aria-label="Close Post Viewer">&times;</button>
+      
+      <div class="insta-modal-layout">
+        <!-- Media Column -->
+        <div class="insta-modal-media">
+          <img src="steamed_momo_gourmet.png" alt="Instagram Post Media" id="modal-post-img" />
+          <div class="modal-media-badge" id="modal-media-badge">🎬 REEL</div>
+        </div>
+
+        <!-- Interactive Comments & Details Column -->
+        <div class="insta-modal-details">
+          <!-- Author Header -->
+          <div class="modal-author-header">
+            <img src="logo.jpg" alt="momoloksyd" class="modal-author-avatar" />
+            <div class="modal-author-info">
+              <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="modal-author-name">
+                momoloksyd <svg viewBox="0 0 24 24" width="14" height="14" fill="#3897f0"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.9 14.7l-4.2-4.2 1.4-1.4 2.8 2.8 6.8-6.8 1.4 1.4-8.2 8.2z"/></svg>
+              </a>
+              <span class="modal-location">Mo Molok · Ashfield, Sydney</span>
+            </div>
+            <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-sm btn-xs modal-follow-btn">Follow ↗</a>
+          </div>
+
+          <!-- Comments Feed -->
+          <div class="modal-comments-feed" id="modal-comments-feed">
+            <!-- Dynamic Comments injected by script -->
+          </div>
+
+          <!-- Interaction Actions & Like Bar -->
+          <div class="modal-actions-bar">
+            <div class="modal-buttons-row">
+              <button class="insta-action-btn modal-like-trigger"><span class="modal-heart-icon">🤍</span></button>
+              <button class="insta-action-btn modal-comment-trigger"><span>💬</span></button>
+              <button class="insta-action-btn modal-share-trigger"><span>↗</span></button>
+              <button class="insta-action-btn modal-bookmark-trigger"><span>🏷️</span></button>
+            </div>
+            <div class="modal-likes-count"><strong id="modal-like-num">1,840</strong> likes</div>
+            <div class="modal-timestamp">2 HOURS AGO</div>
+          </div>
+
+          <!-- Live Add Comment Form -->
+          <form class="modal-add-comment-form" id="modal-comment-form">
+            <input type="text" placeholder="Add a comment as guest..." id="modal-comment-input" required />
+            <button type="submit" class="modal-comment-submit">Post</button>
+          </form>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- ===== IN-WEBSITE INSTAGRAM STORY VIEWER MODAL ===== -->
+  <div class="insta-story-modal-overlay" id="insta-story-modal" aria-hidden="true" role="dialog" aria-label="Instagram Story Viewer">
+    <div class="story-viewer-frame">
+      <!-- Story Progress Bars -->
+      <div class="story-progress-bar-wrap" id="story-progress-bars">
+        <div class="story-bar"><div class="story-bar-fill"></div></div>
+      </div>
+
+      <!-- Story Header -->
+      <div class="story-header-bar">
+        <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer">
+          <img src="logo.jpg" alt="momoloksyd" class="story-avatar" />
+        </a>
+        <div class="story-header-meta">
+          <a href="https://www.instagram.com/momoloksyd/" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
+            <span class="story-user">momoloksyd</span>
+          </a>
+          <span class="story-time">3h</span>
+        </div>
+        <button class="story-pause-btn" id="story-pause-btn" aria-label="Pause Story">❚❚</button>
+        <button class="story-close-btn" id="story-close-btn" aria-label="Close Story">&times;</button>
+      </div>
+
+      <!-- Story Media Container -->
+      <div class="story-media-view" id="story-media-view">
+        <img src="steamed_momo_gourmet.png" alt="Story Visual" id="story-current-img" />
+        <div class="story-caption-overlay" id="story-current-caption">Fresh morning momo pleating at Mo Molok Ashfield 🔥</div>
+      </div>
+
+      <!-- Tap Zones for navigation -->
+      <div class="story-tap-left" id="story-tap-prev" aria-label="Previous Story"></div>
+      <div class="story-tap-right" id="story-tap-next" aria-label="Next Story"></div>
+
+      <!-- Story Interactive Reaction Bar -->
+      <div class="story-reaction-footer">
+        <input type="text" placeholder="Reply to @momoloksyd..." class="story-reply-input" />
+        <div class="story-quick-emojis">
+          <button class="story-emoji-btn" data-emoji="❤️">❤️</button>
+          <button class="story-emoji-btn" data-emoji="🔥">🔥</button>
+          <button class="story-emoji-btn" data-emoji="🥟">🥟</button>
+          <button class="story-emoji-btn" data-emoji="🤤">🤤</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== REVIEWS & TESTIMONIALS ===== -->
   <section class="section reviews-section">
@@ -941,10 +1270,30 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>© 2024 Mo Molok Ashfield · 20 Charlotte Street, Ashfield NSW 2131</p>
-        <p class="footer-credit">Rooted in Dharan, planted in Sydney 🇳🇵</p>
+        <p class="footer-credit">Made by <strong class="footer-author">ECNOTEk</strong> · Rooted in Dharan, planted in Sydney 🇳🇵</p>
       </div>
     </div>
   </footer>
+
+  <!-- ===== MOBILE FLOATING STICKY ACTION BAR ===== -->
+  <aside class="mobile-action-bar" id="mobile-action-bar" aria-label="Mobile quick actions">
+    <a href="#menu" class="mobile-bar-btn" id="mob-btn-menu">
+      <span class="mob-btn-icon">🥟</span>
+      <span class="mob-btn-label">Menu</span>
+    </a>
+    <button class="mobile-bar-btn" id="mob-btn-reserve">
+      <span class="mob-btn-icon">📅</span>
+      <span class="mob-btn-label">Book Table</span>
+    </button>
+    <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn mob-btn-primary" id="mob-btn-order">
+      <span class="mob-btn-icon">🛵</span>
+      <span class="mob-btn-label">UberEats</span>
+    </a>
+    <a href="tel:0297988888" class="mobile-bar-btn" id="mob-btn-call">
+      <span class="mob-btn-icon">📞</span>
+      <span class="mob-btn-label">Call</span>
+    </a>
+  </aside>
 
   <script src="script.js"></script>
   <script src="animations.js"></script>

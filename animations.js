@@ -27,35 +27,10 @@
     // Simplified timeline - fewer elements to animate
     const heroTl = gsap.timeline({ delay: 0.2 });
 
-    heroTl.from('.hero-status-badge', {
-      opacity: 0,
-      y: -15,
-      duration: FAST_DURATION,
-      ease: 'power2.out'
-    }, 0);
-
-    heroTl.from('.title-line', {
-      opacity: 0,
-      y: 30,
-      duration: NORMAL_DURATION,
-      ease: 'power3.out',
-      stagger: 0.1
-    }, 0.15);
-
-    heroTl.from('.hero-sub', {
-      opacity: 0,
-      y: 20,
-      duration: FAST_DURATION,
-      ease: 'power2.out'
-    }, 0.35);
-
-    heroTl.from('.hero-actions .btn', {
-      opacity: 0,
-      y: 15,
-      duration: FAST_DURATION,
-      ease: 'back.out',
-      stagger: 0.08
-    }, 0.5);
+    heroTl.fromTo('.hero-status-badge', { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', clearProps: 'all' }, 0);
+    heroTl.fromTo('.title-line', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: 0.08, clearProps: 'all' }, 0.1);
+    heroTl.fromTo('.hero-sub', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', clearProps: 'all' }, 0.25);
+    heroTl.fromTo('.hero-actions .btn', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: 0.06, clearProps: 'all' }, 0.35);
 
     // Scroll indicator - simpler animation
     gsap.to('.scroll-wheel', {
@@ -90,28 +65,30 @@
      SCROLL REVEAL ANIMATIONS — Deferred & Optimized
      ════════════════════════════════════════════════════ */
   function initScrollRevealGSAP() {
+    if (prefersReducedMotion || typeof ScrollTrigger === 'undefined') return;
+
     const revealElements = document.querySelectorAll(
       '.about-text-col, .about-visual-col, .promise-card, .showcase-stage, .menu-card, ' +
-      '.dharan-pillar-card, .gallery-item, .review-card, .contact-card, ' +
-      '.section-eyebrow'
+      '.dharan-pillar-card, .insta-profile-card, .insta-card, .story-bubble, .review-card, .contact-card'
     );
 
     revealElements.forEach((el) => {
-      gsap.set(el, { opacity: 0, y: 30 });
-
-      ScrollTrigger.create({
-        trigger: el,
-        onEnter: () => {
-          gsap.to(el, {
-            opacity: 1,
-            y: 0,
-            duration: NORMAL_DURATION,
-            ease: 'power2.out'
-          });
-        },
-        once: true,
-        markers: false
-      });
+      // Graceful reveal that immediately clears properties so nothing stays stuck at opacity 0
+      gsap.fromTo(el, 
+        { opacity: 0.2, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 92%',
+            once: true,
+            onEnter: () => gsap.set(el, { clearProps: 'transform,opacity' })
+          }
+        }
+      );
     });
   }
 

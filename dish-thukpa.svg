@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#181614"/>
+      <stop offset="60%" stop-color="#100F12"/>
+      <stop offset="100%" stop-color="#08080A"/>
+    </radialGradient>
+    <linearGradient id="subtleBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(232, 184, 86, 0.35)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.05)"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGlow)"/>
+  <rect width="800" height="600" fill="url(#gridPattern)"/>
+
+  <!-- Decorative Inner Border -->
+  <rect x="25" y="25" width="750" height="550" rx="16" fill="none" stroke="url(#subtleBorder)" stroke-width="1.5"/>
+  
+  <!-- Corner Geometric Accents -->
+  <path d="M 45 60 L 45 45 L 60 45" fill="none" stroke="#D4A574" stroke-width="2"/>
+  <path d="M 755 60 L 755 45 L 740 45" fill="none" stroke="#D4A574" stroke-width="2"/>
+  <path d="M 45 540 L 45 555 L 60 555" fill="none" stroke="#D4A574" stroke-width="2"/>
+  <path d="M 755 540 L 755 555 L 740 555" fill="none" stroke="#D4A574" stroke-width="2"/>
+
+  <!-- Top Badge -->
+  <g transform="translate(400, 75)">
+    <rect x="-110" y="-16" width="220" height="32" rx="16" fill="rgba(232, 184, 86, 0.08)" stroke="rgba(232, 184, 86, 0.3)" stroke-width="1"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#E8B856">COMFORT BROTH</text>
+  </g>
+
+  <!-- Central Illustrated Art / Icon -->
+  <g transform="translate(400, 255)">
+    <circle cx="0" cy="0" r="110" fill="rgba(212, 165, 116, 0.03)" stroke="rgba(212, 165, 116, 0.15)" stroke-width="1" stroke-dasharray="4 6"/>
+    <circle cx="0" cy="0" r="95" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    
+  <path d="M -65 15 C -65 55, 65 55, 65 15 Z" fill="rgba(222, 94, 52, 0.15)" stroke="#D4A574" stroke-width="3"/>
+  <ellipse cx="0" cy="15" rx="65" ry="18" fill="rgba(232, 140, 56, 0.2)" stroke="#E8B856" stroke-width="2"/>
+  <path d="M -40 15 Q -20 2, 0 15 Q 20 28, 40 15" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <path d="M -30 20 Q -10 8, 10 20 Q 30 32, 35 20" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="-50" y1="-70" x2="15" y2="18" stroke="#E8B856" stroke-width="3" stroke-linecap="round"/>
+  <line x1="-30" y1="-80" x2="25" y2="15" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 12 12 Q 10 -15, 2 -30" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+
+  </g>
+
+  <!-- Title & Subtitle Typography -->
+  <g transform="translate(400, 435)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="28" font-weight="700" fill="#F7F5F0" letter-spacing="1">Chicken Thukpa Soup</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="14" font-weight="400" fill="#9E9CA4" letter-spacing="0.5">Handmade Mountain Wheat Noodles &amp; Rich Stock</text>
+  </g>
+
+  <!-- Bottom Brand Watermark -->
+  <g transform="translate(400, 520)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="11" font-weight="600" fill="rgba(212, 165, 116, 0.5)" letter-spacing="3">MO MOLOK · ASHFIELD, SYDNEY</text>
+  </g>
+</svg>
