@@ -7,48 +7,75 @@
 
 /* ── TRON: ARES RED & OBSIDIAN BLACK DESIGN SYSTEM ── */
 :root {
-  /* Colors - Tron Ares Obsidian Void & Laser Crimson Red */
-  --dharan-green:       #050508;
-  --dharan-green-light: #0D0D14;
-  --dharan-green-glow:  rgba(255, 0, 51, 0.45);
+  /* Premium Color Palette - Warm Himalayan Sunset */
+  --primary-dark:       #0A0E27;      /* Deep Navy */
+  --primary-darker:     #050812;      /* Almost Black */
+  --surface-primary:    #0F1528;      /* Dark Blue Surface */
+  --surface-secondary:  #1A1F3A;      /* Slightly Lighter Surface */
   
-  --cream-bg:           #050508;
-  --cream-surface:      #0C0C12;
-  --cream-card:         #11111A;
+  /* Warm Accent Palette - Sunset & Gold */
+  --accent-gold:        #D4A574;      /* Warm Gold */
+  --accent-amber:       #E8B856;      /* Rich Amber */
+  --accent-warm:        #F4A460;      /* Warm Sandy Brown */
+  --accent-copper:      #C17A4A;      /* Deep Copper */
   
-  --crimson-spice:      #FF0033; /* Electric Laser Red */
-  --crimson-light:      #FF2A55;
-  --crimson-dark:       #B30024;
+  /* Secondary Colors */
+  --highlight-coral:    #FF6B6B;      /* Accent Red */
+  --highlight-peach:    #FFB997;      /* Soft Peach */
   
-  --amber-gold:         #FF8800;
-  --amber-light:        #FFAA33;
+  /* Text Colors - Refined */
+  --text-primary:       #F8F9FA;      /* Off White */
+  --text-secondary:     #D4D4D8;      /* Light Gray */
+  --text-tertiary:      #A1A1A8;      /* Medium Gray */
+  --text-muted:         #74747F;      /* Muted Gray */
   
-  --charcoal-dark:      #030305;
-  --slate-dark:         #09090E;
-  --slate-mid:          #12121A;
-  --slate-light:        #1A1A26;
+  /* Gradients */
+  --gradient-sunset:    linear-gradient(135deg, #D4A574 0%, #E8B856 50%, #F4A460 100%);
+  --gradient-dark:      linear-gradient(135deg, #0F1528 0%, #1A1F3A 100%);
   
-  --text-main:          #FFFFFF;
-  --text-muted:         #A0A0B8;
-  --text-light:         #FFFFFF;
-  --text-light-sub:     rgba(255, 255, 255, 0.78);
+  /* Typography - Modern & Clean */
+  --ff-display:         'Comic Relief', 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --ff-heading:         'Comic Relief', 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --ff-tech:            'Manrope', 'Inter', 'Segoe UI', sans-serif;
+  --ff-body:            'Inter', 'Segoe UI', sans-serif;
   
-  --border-light:       rgba(255, 0, 51, 0.22);
-  --border-dark:        rgba(255, 0, 51, 0.4);
-  
-  /* Typography - TRON ARES Geometric Display Font */
-  --ff-display:         'Orbitron', sans-serif;
-  --ff-heading:         'Orbitron', sans-serif;
-  --ff-tech:            'Rajdhani', sans-serif;
-  --ff-body:            'Outfit', sans-serif;
-
   /* Transitions & Shadows */
   --ease-smooth:        cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring:        cubic-bezier(0.34, 1.56, 0.64, 1);
-  --shadow-sm:          0 4px 15px rgba(0, 0, 0, 0.85);
-  --shadow-md:          0 10px 30px rgba(0, 0, 0, 0.92);
-  --shadow-lg:          0 20px 50px rgba(0, 0, 0, 0.96);
-  --shadow-glow:        0 0 25px rgba(255, 0, 51, 0.65);
+  --shadow-sm:          0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md:          0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg:          0 16px 48px rgba(0, 0, 0, 0.8);
+
+  /* Backwards compatibility mappings for existing code */
+  --dharan-green:       #0A0E27;
+  --dharan-green-light: #0F1528;
+  --dharan-green-glow:  rgba(232, 184, 86, 0.2);
+  
+  --cream-bg:           #0A0E27;
+  --cream-surface:      #0F1528;
+  --cream-card:         #1A1F3A;
+  
+  --crimson-spice:      #E8B856;      /* Maps to amber */
+  --crimson-light:      #F4A460;      /* Maps to warm */
+  --crimson-dark:       #D4A574;      /* Maps to gold */
+  
+  --amber-gold:         #D4A574;
+  --amber-light:        #E8B856;
+  
+  --charcoal-dark:      #050812;
+  --slate-dark:         #0A0E27;
+  --slate-mid:          #0F1528;
+  --slate-light:        #1A1F3A;
+  
+  --text-main:          #F8F9FA;
+  --text-light:         #F8F9FA;
+  --text-light-sub:     rgba(212, 212, 216, 0.85);
+  
+  --border-light:       rgba(212, 165, 116, 0.15);
+  --border-dark:        rgba(212, 165, 116, 0.3);
+  
+  --shadow-glow:        0 8px 24px rgba(232, 184, 86, 0.3);
+}
 }
 
 /* ── RESET & BASE ── */
@@ -65,11 +92,12 @@ html {
 
 body {
   font-family: var(--ff-body);
-  background-color: var(--cream-bg);
-  color: var(--text-main);
-  line-height: 1.7;
+  background-color: var(--primary-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -170,44 +198,45 @@ em {
 }
 
 .btn-primary {
-  background: var(--crimson-spice);
-  color: #FFFFFF;
-  border-color: var(--crimson-spice);
-  box-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+  background: linear-gradient(135deg, #D4A574, #E8B856);
+  color: #0A0E27;
+  border-color: #E8B856;
+  box-shadow: 0 8px 24px rgba(232, 184, 86, 0.3);
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: var(--crimson-light);
-  border-color: var(--crimson-light);
-  transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(255, 0, 51, 0.9);
+  background: linear-gradient(135deg, #E8B856, #F4A460);
+  border-color: #F4A460;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(232, 184, 86, 0.5);
 }
 
 .btn-secondary {
-  background: #0E0E16;
-  color: #FFFFFF;
-  border-color: rgba(255, 0, 51, 0.4);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  background: rgba(212, 165, 116, 0.1);
+  color: #F8F9FA;
+  border-color: rgba(212, 165, 116, 0.3);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .btn-secondary:hover {
-  background: #181824;
-  border-color: var(--crimson-spice);
+  background: rgba(212, 165, 116, 0.2);
+  border-color: #D4A574;
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(255, 0, 51, 0.5);
+  box-shadow: 0 8px 24px rgba(212, 165, 116, 0.2);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.06);
-  color: #FFFFFF;
-  border-color: rgba(255, 0, 51, 0.35);
+  background: rgba(212, 165, 116, 0.08);
+  color: #F8F9FA;
+  border-color: rgba(212, 165, 116, 0.25);
   backdrop-filter: blur(8px);
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 0, 51, 0.15);
-  border-color: var(--crimson-spice);
-  box-shadow: 0 0 20px rgba(255, 0, 51, 0.4);
+  background: rgba(212, 165, 116, 0.15);
+  border-color: #D4A574;
+  box-shadow: 0 8px 24px rgba(212, 165, 116, 0.25);
   transform: translateY(-2px);
 }
 
@@ -523,10 +552,10 @@ em {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
-  transform: scale(1.03);
+  background-position: 30% center;
+  transform: scale(1.08);
   transition: transform 12s ease-out;
-  filter: saturate(0.85) contrast(1.15);
+  filter: saturate(0.8) contrast(1.12) brightness(1.7);
 }
 
 .hero-overlay {
@@ -534,9 +563,9 @@ em {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(3, 3, 5, 0.78) 0%,
-    rgba(5, 5, 8, 0.90) 60%,
-    rgba(5, 5, 8, 0.98) 100%
+    rgba(3, 3, 5, 0.55) 0%,
+    rgba(5, 5, 8, 0.65) 60%,
+    rgba(5, 5, 8, 0.75) 100%
   );
 }
 
@@ -571,36 +600,44 @@ em {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #FF0033;
-  box-shadow: 0 0 12px #FF0033;
+  background: #E8B856;
+  box-shadow: 0 0 12px rgba(232, 184, 86, 0.6);
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
 .hero-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--ff-display);
   font-size: clamp(2.6rem, 5.5vw, 5.2rem);
-  font-weight: 800;
-  color: #FFFFFF;
-  line-height: 1.08;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: #F8F9FA;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   max-width: 20ch;
-  text-shadow: 0 0 30px rgba(255, 0, 51, 0.4);
+  text-shadow: 0 8px 32px rgba(212, 165, 116, 0.15);
 }
 
 .hero-title em {
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--ff-display);
   font-style: normal;
-  color: var(--crimson-spice);
-  text-shadow: 0 0 25px rgba(255, 0, 51, 0.9);
+  font-weight: 700;
+  color: #E8B856;
+  text-shadow: 0 4px 20px rgba(232, 184, 86, 0.4);
 }
 
 .hero-sub {
   max-width: 60ch;
-  color: var(--text-light-sub);
+  color: var(--text-secondary);
   font-size: 1.15rem;
   line-height: 1.75;
   margin-bottom: 2.5rem;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -1802,6 +1839,90 @@ em {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ════════════════════════════════════════════════════
+   ORDER NOTIFICATION STYLES — GSAP Animations
+   ════════════════════════════════════════════════════ */
+.order-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #1A1F3A 0%, #0F1528 100%);
+  border: 1px solid rgba(212, 165, 116, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 165, 116, 0.2);
+  z-index: 9999;
+  max-width: 380px;
+  font-family: var(--ff-body);
+}
+
+.order-notification-content {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.order-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.order-text h4 {
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  color: #E8B856;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.order-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.order-progress {
+  width: 100%;
+  height: 3px;
+  background: rgba(212, 165, 116, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #D4A574, #E8B856);
+  width: 0%;
+  border-radius: 2px;
+  box-shadow: 0 0 16px rgba(232, 184, 86, 0.5);
+}
+
+/* ════════════════════════════════════════════════════
+   GSAP ANIMATION ENHANCEMENTS — Will-Change & GPU
+   ════════════════════════════════════════════════════ */
+.btn, .hero-title, .menu-card, .stat-card, .nav-link {
+  will-change: transform, filter, box-shadow, color;
+}
+
+/* Smooth defaults for all interactive elements */
+button, a, input, select, textarea {
+  transition: background-color 0.3s var(--ease-smooth);
+}
+
+/* Modal backdrop for animations */
+.modal-backdrop {
+  opacity: 0;
+}
+
+.modal-content {
+  opacity: 0;
+  transform: scale(0.95) translateY(30px);
 }
 
 /* ── RESPONSIVE STYLES ── */
