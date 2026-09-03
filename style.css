@@ -3201,18 +3201,6 @@ em {
   letter-spacing: 0.03em;
 }
 
-/* ── SCROLL REVEAL CLASS ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ════════════════════════════════════════════════════
    ORDER NOTIFICATION STYLES — GSAP Animations
    ════════════════════════════════════════════════════ */
@@ -3285,16 +3273,6 @@ em {
 /* Smooth defaults for all interactive elements */
 button, a, input, select, textarea {
   transition: background-color 0.3s var(--ease-smooth);
-}
-
-/* Modal backdrop for animations */
-.modal-backdrop {
-  opacity: 0;
-}
-
-.modal-content {
-  opacity: 0;
-  transform: scale(0.95) translateY(30px);
 }
 
 /* ════════════════════════════════════════════════════

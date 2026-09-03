@@ -319,81 +319,6 @@
   }
 
   /* ════════════════════════════════════════════════════
-     MODAL ANIMATIONS — Lightweight
-     ════════════════════════════════════════════════════ */
-  function initModalAnimations() {
-    const modal = document.getElementById('reservation-modal');
-    if (!modal) return;
-
-    const openBtns = [
-      document.getElementById('open-reserve-btn'),
-      document.getElementById('hero-reserve-btn')
-    ];
-
-    const closeBtn = document.getElementById('close-modal-btn');
-    const successCloseBtn = document.getElementById('success-close-btn');
-
-    function animateModalOpen() {
-      const backdrop = modal.querySelector('.modal-backdrop') || modal;
-      const modalContent = modal.querySelector('.modal-content') || modal.querySelector('form');
-
-      gsap.timeline()
-        .to(backdrop, {
-          opacity: 1,
-          duration: FAST_DURATION,
-          ease: 'power1.out'
-        }, 0)
-        .to(modalContent, {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          duration: FAST_DURATION,
-          ease: 'back.out'
-        }, 0.05);
-    }
-
-    function animateModalClose() {
-      const backdrop = modal.querySelector('.modal-backdrop') || modal;
-      const modalContent = modal.querySelector('.modal-content') || modal.querySelector('form');
-
-      return gsap.timeline()
-        .to(modalContent, {
-          opacity: 0,
-          scale: 0.95,
-          y: 20,
-          duration: 0.3,
-          ease: 'power2.in'
-        }, 0)
-        .to(backdrop, {
-          opacity: 0,
-          duration: 0.2
-        }, 0.05);
-    }
-
-    openBtns.forEach(btn => {
-      if (btn) {
-        btn.addEventListener('click', () => {
-          modal.classList.add('open');
-          animateModalOpen();
-        });
-      }
-    });
-
-    const closeHandler = () => {
-      animateModalClose().then(() => {
-        modal.classList.remove('open');
-      });
-    };
-
-    if (closeBtn) closeBtn.addEventListener('click', closeHandler);
-    if (successCloseBtn) successCloseBtn.addEventListener('click', closeHandler);
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeHandler();
-    });
-  }
-
-  /* ════════════════════════════════════════════════════
      LAZY INITIALIZATION — Defer Non-Critical Animations
      ════════════════════════════════════════════════════ */
   function initAllAnimations() {
@@ -415,7 +340,6 @@
         initScrollRevealGSAP();
         initMenuCardAnimations();
         initNavbarAnimations();
-        initModalAnimations();
         initFormAnimations();
       }, 500);
     }

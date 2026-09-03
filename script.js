@@ -212,29 +212,6 @@
     }
   }
 
-  /* ── SCROLL REVEAL INTERSECTION OBSERVER ── */
-  function initScrollReveal() {
-    const revealElements = document.querySelectorAll(
-      '.about-text-col, .about-visual-col, .promise-card, .menu-card, .dharan-pillar-card, .gallery-item, .review-card, .contact-card'
-    );
-
-    revealElements.forEach(el => el.classList.add('reveal'));
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    revealElements.forEach(el => observer.observe(el));
-  }
-
   /* ── SMOOTH SCROLL OFFSET FOR ANCHORS ── */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -1033,7 +1010,6 @@
     initInstagramSocialLounge();
     initMenuSearchAndFilter();
     initReservationModal();
-    initScrollReveal();
     initSmoothScroll();
     initTronGlowEffect();
   }
