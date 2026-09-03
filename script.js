@@ -156,7 +156,6 @@
       document.getElementById('open-reserve-btn'),
       document.getElementById('hero-reserve-btn'),
       document.getElementById('drawer-reserve-btn'),
-      document.getElementById('mob-btn-reserve')
       document.getElementById('mob-btn-reserve'),
       document.getElementById('showcase-reserve-btn')
     ];
@@ -344,9 +343,9 @@
         desc: "Handcrafted daily with tender minced chicken, fresh mountain herbs, and a delicate touch of roasted Himalayan timur pepper. Served steaming hot with house sesame-chili achar.",
         price: "$16.50",
         img: "dish-steamed-momo.svg",
-        primary: "#E5A93C",
-        secondary: "#FF2E2E",
-        glow: "rgba(229, 169, 60, 0.45)"
+        primary: "#C9A87C",
+        secondary: "#A8734D",
+        glow: "rgba(201, 168, 124, 0.20)"
       },
       {
         cat: "SIGNATURE SOUP BROTH · 02/06",
@@ -357,9 +356,9 @@
         desc: "Dharan's most coveted comfort dish. Hand-pleated juicy dumplings submerged in a warm, fragrant slow-simmered roasted sesame, tomato, and Timur chili broth.",
         price: "$18.99",
         img: "dish-jhol-momo.svg",
-        primary: "#FF3838",
-        secondary: "#9E0E18",
-        glow: "rgba(255, 56, 56, 0.5)"
+        primary: "#C4916B",
+        secondary: "#8B5A3C",
+        glow: "rgba(196, 145, 107, 0.22)"
       },
       {
         cat: "PLANT-BASED CRAFT · 03/06",
@@ -370,9 +369,9 @@
         desc: "Delicately pleated translucent wrappers filled with finely minced wild mushrooms, mountain cabbage, ginger root, and Himalayan herbs.",
         price: "$15.50",
         img: "dish-vegan-momo.svg",
-        primary: "#38B07D",
-        secondary: "#0E3D28",
-        glow: "rgba(56, 176, 125, 0.45)"
+        primary: "#7BA68A",
+        secondary: "#3D6B4E",
+        glow: "rgba(123, 166, 138, 0.18)"
       },
       {
         cat: "DHARAN STREET ICON · 04/06",
@@ -383,9 +382,9 @@
         desc: "Flaky golden paratha flatbread layered with fluffy farm egg, stuffed with wok-tossed chowmein noodles, crunchy red onions, and spiced tomato reduction.",
         price: "$12.99",
         img: "dish-egg-roll.svg",
-        primary: "#E89638",
-        secondary: "#944208",
-        glow: "rgba(232, 150, 56, 0.45)"
+        primary: "#D4A55A",
+        secondary: "#8B6D30",
+        glow: "rgba(212, 165, 90, 0.20)"
       },
       {
         cat: "WARMING NOODLE BROTH · 05/06",
@@ -396,9 +395,9 @@
         desc: "Hearty mountain wheat noodles in rich aromatic chicken stock, garnished with slow-braised chicken shreds, crisp greens, coriander, and spiced chili oil.",
         price: "$15.99",
         img: "dish-thukpa.svg",
-        primary: "#DE5E34",
-        secondary: "#5E1D0C",
-        glow: "rgba(222, 94, 52, 0.45)"
+        primary: "#B87A5A",
+        secondary: "#6B4030",
+        glow: "rgba(184, 122, 90, 0.20)"
       },
       {
         cat: "ARTISANAL REFRESHER · 06/06",
@@ -409,9 +408,9 @@
         desc: "Rich, creamy cultured yogurt blended with sun-ripened Alphonso mango pulp, a whisper of Himalayan cardamom, and pistachio dust. The perfect spice balancer.",
         price: "$9.99",
         img: "dish-mango-lassi.svg",
-        primary: "#FFA834",
-        secondary: "#7A3600",
-        glow: "rgba(255, 168, 52, 0.45)"
+        primary: "#D4A55A",
+        secondary: "#7A5520",
+        glow: "rgba(212, 165, 90, 0.20)"
       }
     ];
 

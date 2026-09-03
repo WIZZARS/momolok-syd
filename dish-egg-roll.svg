@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
   <defs>
     <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
-      <stop offset="0%" stop-color="#181614"/>
-      <stop offset="60%" stop-color="#100F12"/>
-      <stop offset="100%" stop-color="#08080A"/>
+      <stop offset="0%" stop-color="#1A1714"/>
+      <stop offset="60%" stop-color="#14120F"/>
+      <stop offset="100%" stop-color="#0C0B09"/>
     </radialGradient>
     <linearGradient id="subtleBorder" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(232, 184, 86, 0.35)"/>
-      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.05)"/>
+      <stop offset="0%" stop-color="rgba(201, 168, 124, 0.28)"/>
+      <stop offset="100%" stop-color="rgba(240, 235, 225, 0.04)"/>
     </linearGradient>
     <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1"/>
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(240, 235, 225, 0.015)" stroke-width="1"/>
     </pattern>
   </defs>
 
@@ -19,46 +19,46 @@
   <rect width="800" height="600" fill="url(#gridPattern)"/>
 
   <!-- Decorative Inner Border -->
-  <rect x="25" y="25" width="750" height="550" rx="16" fill="none" stroke="url(#subtleBorder)" stroke-width="1.5"/>
+  <rect x="25" y="25" width="750" height="550" rx="16" fill="none" stroke="url(#subtleBorder)" stroke-width="1"/>
   
   <!-- Corner Geometric Accents -->
-  <path d="M 45 60 L 45 45 L 60 45" fill="none" stroke="#D4A574" stroke-width="2"/>
-  <path d="M 755 60 L 755 45 L 740 45" fill="none" stroke="#D4A574" stroke-width="2"/>
-  <path d="M 45 540 L 45 555 L 60 555" fill="none" stroke="#D4A574" stroke-width="2"/>
-  <path d="M 755 540 L 755 555 L 740 555" fill="none" stroke="#D4A574" stroke-width="2"/>
+  <path d="M 45 60 L 45 45 L 60 45" fill="none" stroke="#C9A87C" stroke-width="1.5"/>
+  <path d="M 755 60 L 755 45 L 740 45" fill="none" stroke="#C9A87C" stroke-width="1.5"/>
+  <path d="M 45 540 L 45 555 L 60 555" fill="none" stroke="#C9A87C" stroke-width="1.5"/>
+  <path d="M 755 540 L 755 555 L 740 555" fill="none" stroke="#C9A87C" stroke-width="1.5"/>
 
   <!-- Top Badge -->
   <g transform="translate(400, 75)">
-    <rect x="-110" y="-16" width="220" height="32" rx="16" fill="rgba(232, 184, 86, 0.08)" stroke="rgba(232, 184, 86, 0.3)" stroke-width="1"/>
-    <text x="0" y="5" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#E8B856">STREET LEGEND</text>
+    <rect x="-110" y="-16" width="220" height="32" rx="16" fill="rgba(201, 168, 124, 0.06)" stroke="rgba(201, 168, 124, 0.22)" stroke-width="1"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#C9A87C">STREET LEGEND</text>
   </g>
 
   <!-- Central Illustrated Art / Icon -->
   <g transform="translate(400, 255)">
-    <circle cx="0" cy="0" r="110" fill="rgba(212, 165, 116, 0.03)" stroke="rgba(212, 165, 116, 0.15)" stroke-width="1" stroke-dasharray="4 6"/>
-    <circle cx="0" cy="0" r="95" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="110" fill="rgba(201, 168, 124, 0.02)" stroke="rgba(201, 168, 124, 0.10)" stroke-width="1" stroke-dasharray="4 6"/>
+    <circle cx="0" cy="0" r="95" fill="none" stroke="rgba(240, 235, 225, 0.04)" stroke-width="1"/>
     
-  <ellipse cx="0" cy="35" rx="75" ry="22" fill="rgba(232, 150, 56, 0.12)" stroke="#D4A574" stroke-width="2.5"/>
+  <ellipse cx="0" cy="35" rx="75" ry="22" fill="rgba(232, 150, 56, 0.12)" stroke="#C9A87C" stroke-width="2.5"/>
   <g transform="rotate(-25)">
-    <rect x="-55" y="-18" width="110" height="36" rx="18" fill="rgba(232, 184, 86, 0.18)" stroke="#E8B856" stroke-width="2.5"/>
-    <line x1="-30" y1="-18" x2="-30" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <line x1="0" y1="-18" x2="0" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <line x1="30" y1="-18" x2="30" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="-55" y="-18" width="110" height="36" rx="18" fill="rgba(201, 168, 124, 0.18)" stroke="#D4A55A" stroke-width="2.5"/>
+    <line x1="-30" y1="-18" x2="-30" y2="18" stroke="#C9A87C" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#C9A87C" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="30" y1="-18" x2="30" y2="18" stroke="#C9A87C" stroke-width="1.5" stroke-dasharray="3 3"/>
     <circle cx="48" cy="0" r="7" fill="#FF5252"/>
   </g>
-  <path d="M -45 -40 L -35 -50 M -35 -40 L -45 -50" stroke="#E8B856" stroke-width="2"/>
-  <path d="M 45 -40 L 55 -50 M 55 -40 L 45 -50" stroke="#E8B856" stroke-width="2"/>
+  <path d="M -45 -40 L -35 -50 M -35 -40 L -45 -50" stroke="#D4A55A" stroke-width="2"/>
+  <path d="M 45 -40 L 55 -50 M 55 -40 L 45 -50" stroke="#D4A55A" stroke-width="2"/>
 
   </g>
 
   <!-- Title & Subtitle Typography -->
   <g transform="translate(400, 435)">
-    <text x="0" y="0" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="28" font-weight="700" fill="#F7F5F0" letter-spacing="1">Dharane Egg Roll</text>
-    <text x="0" y="32" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="14" font-weight="400" fill="#9E9CA4" letter-spacing="0.5">Flaky Paratha Wrap with Wok-Fired Chowmein</text>
+    <text x="0" y="0" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="26" font-weight="700" fill="#F0EBE1" letter-spacing="1">Dharane Egg Roll</text>
+    <text x="0" y="30" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="13" font-weight="400" fill="#A09889" letter-spacing="0.5">Flaky Paratha Wrap with Wok-Fired Chowmein</text>
   </g>
 
   <!-- Bottom Brand Watermark -->
   <g transform="translate(400, 520)">
-    <text x="0" y="0" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="11" font-weight="600" fill="rgba(212, 165, 116, 0.5)" letter-spacing="3">MO MOLOK · ASHFIELD, SYDNEY</text>
+    <text x="0" y="0" text-anchor="middle" font-family="'Comic Relief', 'Comic Neue', cursive, sans-serif" font-size="10" font-weight="600" fill="rgba(201, 168, 124, 0.35)" letter-spacing="3.5">MO MOLOK · ASHFIELD, SYDNEY</text>
   </g>
 </svg>

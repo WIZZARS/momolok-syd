@@ -43,44 +43,44 @@
 
 /* ── CALM DESIGN TOKENS & SYSTEM ROOT ── */
 :root {
-  --dish-primary:       #D4A574;
-  --dish-secondary:     #E8B856;
-  --dish-glow:          rgba(212, 165, 116, 0.18);
+  --dish-primary:       #C9A87C;
+  --dish-secondary:     #D4A55A;
+  --dish-glow:          rgba(201, 168, 124, 0.10);
   transition: --dish-primary 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               --dish-secondary 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               --dish-glow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Calmer Palette — Near-Black / Charcoal Surfaces */
-  --bg-dark:            #0A0A0D;      /* Near-Black Background */
-  --primary-dark:       #0A0A0D;
-  --primary-darker:     #060608;
-  --surface-primary:    #121216;      /* Deep Warm Charcoal */
-  --surface-secondary:  #181820;      /* Slightly Elevated Surface */
-  --surface-card:       rgba(20, 20, 26, 0.85);
+  /* Luxury Palette — Warm Espresso Surfaces */
+  --bg-dark:            #0C0B09;      /* Espresso Black */
+  --primary-dark:       #0C0B09;
+  --primary-darker:     #080705;      /* Deep Espresso */
+  --surface-primary:    #14120F;      /* Warm Charcoal */
+  --surface-secondary:  #1C1915;      /* Warm Elevated Surface */
+  --surface-card:       rgba(22, 20, 16, 0.88);
 
-  /* Accent Palette — Amber & Warm Gold Only */
-  --accent-gold:        #D4A574;      /* Warm Gold */
-  --accent-amber:       #E8B856;      /* Rich Amber */
-  --accent-warm:        #F4A460;      /* Soft Warm Amber */
-  --accent-copper:      #C17A4A;      /* Deep Copper */
-  --accent-glow:        rgba(212, 165, 116, 0.18);
+  /* Accent Palette — Muted Brass & Warm Gold */
+  --accent-gold:        #C9A87C;      /* Muted Brass */
+  --accent-amber:       #D4A55A;      /* Soft Amber */
+  --accent-warm:        #C4916B;      /* Muted Terracotta */
+  --accent-copper:      #A8734D;      /* Deep Restrained Copper */
+  --accent-glow:        rgba(201, 168, 124, 0.10);
 
-  /* Text Colors — Warm White & Soft Grays */
-  --text-primary:       #F4F2EE;      /* Warm White */
-  --text-secondary:     #9E9CA4;      /* Soft Gray */
-  --text-tertiary:      #787680;      /* Medium Gray */
-  --text-muted:         #62606A;      /* Muted Gray */
+  /* Text Colors — Warm Ivory & Soft Warm Grays */
+  --text-primary:       #F0EBE1;      /* Warm Ivory */
+  --text-secondary:     #A09889;      /* Warm Gray */
+  --text-tertiary:      #8A8279;      /* Warm Muted Gray */
+  --text-muted:         #6B6560;      /* Warm Footnote Gray */
 
-  /* Borders & Shadows — Subtle & Restrained */
-  --border-soft:        rgba(255, 255, 255, 0.08);
-  --border-accent:      rgba(212, 165, 116, 0.25);
-  --card-shadow:        0 14px 32px rgba(0, 0, 0, 0.35);
-  --shadow-subtle:      0 12px 28px rgba(0, 0, 0, 0.22);
-  --shadow-sm:          0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow-md:          0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-lg:          0 16px 40px rgba(0, 0, 0, 0.5);
+  /* Borders & Shadows — Softer & Warmer */
+  --border-soft:        rgba(240, 235, 225, 0.06);
+  --border-accent:      rgba(201, 168, 124, 0.18);
+  --card-shadow:        0 14px 32px rgba(0, 0, 0, 0.25);
+  --shadow-subtle:      0 12px 28px rgba(0, 0, 0, 0.18);
+  --shadow-sm:          0 2px 8px rgba(0, 0, 0, 0.20);
+  --shadow-md:          0 8px 24px rgba(0, 0, 0, 0.28);
+  --shadow-lg:          0 16px 40px rgba(0, 0, 0, 0.35);
 
-  /* Typography Stack — Comic Relief with Comic Neue Fallback */
+  /* Typography Stack — Comic Relief (kept per brand) */
   --ff-display:         'Comic Relief', 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
   --ff-heading:         'Comic Relief', 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
   --ff-tech:            'Comic Relief', 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
@@ -91,27 +91,27 @@
   --ease-spring:        cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Backwards Compatibility Mappings */
-  --dharan-green:       #0A0A0D;
-  --dharan-green-light: #121216;
-  --dharan-green-glow:  rgba(212, 165, 116, 0.15);
-  --cream-bg:           #0A0A0D;
-  --cream-surface:      #121216;
-  --cream-card:         #181820;
-  --crimson-spice:      #D4A574;      /* Maps to warm gold */
-  --crimson-light:      #E8B856;      /* Maps to amber */
-  --crimson-dark:       #C17A4A;
-  --amber-gold:         #D4A574;
-  --amber-light:        #E8B856;
-  --charcoal-dark:      #060608;
-  --slate-dark:         #0A0A0D;
-  --slate-mid:          #121216;
-  --slate-light:        #181820;
-  --text-main:          #F4F2EE;
-  --text-light:         #F4F2EE;
-  --text-light-sub:     #9E9CA4;
-  --border-light:       rgba(255, 255, 255, 0.08);
-  --border-dark:        rgba(212, 165, 116, 0.2);
-  --shadow-glow:        0 8px 24px rgba(212, 165, 116, 0.18);
+  --dharan-green:       #0C0B09;
+  --dharan-green-light: #14120F;
+  --dharan-green-glow:  rgba(201, 168, 124, 0.10);
+  --cream-bg:           #0C0B09;
+  --cream-surface:      #14120F;
+  --cream-card:         #1C1915;
+  --crimson-spice:      #C9A87C;
+  --crimson-light:      #D4A55A;
+  --crimson-dark:       #A8734D;
+  --amber-gold:         #C9A87C;
+  --amber-light:        #D4A55A;
+  --charcoal-dark:      #080705;
+  --slate-dark:         #0C0B09;
+  --slate-mid:          #14120F;
+  --slate-light:        #1C1915;
+  --text-main:          #F0EBE1;
+  --text-light:         #F0EBE1;
+  --text-light-sub:     #A09889;
+  --border-light:       rgba(240, 235, 225, 0.06);
+  --border-dark:        rgba(201, 168, 124, 0.15);
+  --shadow-glow:        0 8px 24px rgba(201, 168, 124, 0.10);
 }
 
 /* ── RESET & BASE ── */
@@ -174,25 +174,26 @@ em {
 .section {
   padding: 6.5rem 0;
   position: relative;
+  border-bottom: 1px solid rgba(240, 235, 225, 0.04);
 }
 
 .section-eyebrow {
   display: inline-block;
   font-family: var(--ff-tech);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-gold);
   margin-bottom: 0.85rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.3rem 0.85rem;
-  border-radius: 100px;
+  background: rgba(201, 168, 124, 0.05);
+  border: 1px solid rgba(201, 168, 124, 0.15);
+  padding: 0.25rem 0.8rem;
+  border-radius: 6px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
   color: var(--text-primary);
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
@@ -207,7 +208,8 @@ em {
   color: var(--text-muted);
   max-width: 55ch;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 /* ── BUTTONS & CTAS ── */
@@ -219,32 +221,32 @@ em {
   padding: 0.85rem 2rem;
   border-radius: 8px;
   font-family: var(--ff-tech);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   cursor: pointer;
   transition: all 0.25s var(--ease-smooth);
   border: 1px solid transparent;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #D4A574, #E8B856);
-  color: #0C0C0F;
-  border-color: #E8B856;
-  box-shadow: 0 4px 16px rgba(212, 165, 116, 0.22);
+  background: linear-gradient(135deg, #C9A87C, #D4A55A);
+  color: #0C0B09;
+  border-color: #D4A55A;
+  box-shadow: 0 4px 14px rgba(201, 168, 124, 0.15);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #E8B856, #F4A460);
-  border-color: #F4A460;
+  background: linear-gradient(135deg, #D4A55A, #C4916B);
+  border-color: #C4916B;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(212, 165, 116, 0.35);
+  box-shadow: 0 6px 20px rgba(201, 168, 124, 0.22);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(240, 235, 225, 0.04);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(240, 235, 225, 0.10);
   box-shadow: none;
 }
 
@@ -282,7 +284,7 @@ em {
 
 .btn-outline-sm:hover {
   background: var(--accent-gold);
-  color: #0C0C0F;
+  color: #0C0B09;
   border-color: var(--accent-gold);
 }
 
@@ -293,7 +295,7 @@ em {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: #08080A;
+  background: #0C0B09;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,7 +325,7 @@ em {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(212, 165, 116, 0.4);
+  border: 2px solid rgba(201, 168, 124, 0.35);
 }
 
 .preloader-ring {
@@ -360,7 +362,7 @@ em {
 .preloader-bar {
   width: 140px;
   height: 3px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(240, 235, 225, 0.06);
   border-radius: 3px;
   margin: 0 auto;
   overflow: hidden;
@@ -380,12 +382,12 @@ em {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1002;
-  background: #0A0A0D;
+  background: #0C0B09;
   height: 34px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(240, 235, 225, 0.04);
 }
 
 .ticker-track {
@@ -402,7 +404,7 @@ em {
   font-weight: 500;
   color: var(--text-secondary);
   padding: 0 2.5rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(240, 235, 225, 0.04);
 }
 
 @keyframes tickerScroll {
@@ -419,10 +421,10 @@ em {
 }
 
 #navbar.scrolled {
-  background-color: rgba(10, 10, 13, 0.94);
+  background-color: rgba(12, 11, 9, 0.90);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(240, 235, 225, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .nav-inner {
@@ -511,14 +513,14 @@ em {
 .nav-cta {
   font-family: var(--ff-tech);
   background: var(--accent-gold);
-  color: #0C0C0F;
+  color: #0C0B09;
   padding: 0.55rem 1.25rem;
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   border: 1px solid var(--accent-gold);
-  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.2);
+  box-shadow: 0 4px 12px rgba(201, 168, 124, 0.15);
   transition: all 0.25s var(--ease-smooth);
 }
 
@@ -3575,17 +3577,17 @@ button, a, input, select, textarea {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 7.5vw, 2.7rem);
-    line-height: 1.15;
+    font-size: clamp(1.75rem, 6.2vw, 2.25rem);
+    line-height: 1.2;
     margin-bottom: 1rem;
-    max-width: 16ch;
+    max-width: 22ch;
   }
 
   .hero-sub {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.6;
     margin: 0 auto 1.8rem;
-    max-width: 32ch;
+    max-width: 36ch;
     color: var(--text-secondary);
   }
 
